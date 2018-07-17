@@ -25,7 +25,7 @@ namespace MURK_Rentas
             us.MdiParent = this;
             us.Show();
             button1.Enabled = false;
-            us.lbPort.Text = PuertoMenu.Text;
+            us.lbPort.Text = lbPort_menu.Text;
 
         }
 
@@ -92,6 +92,16 @@ namespace MURK_Rentas
             gpres.MdiParent = this;
             gpres.Show();
             button7.Enabled = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(lbPort_menu.Text);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
