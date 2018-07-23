@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MURKConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MURKConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MURK_Rentas.Properties.Settings.GlobalReference.Default.MURKConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MURKConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MURKConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MURK_Rentas.Properties.Settings.GlobalReference.Default.MURKConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Articulo_rfidTableAdapter" GeneratorDataComponentClassName="Articulo_rfidTableAdapter" Name="Articulo_rfid" UserDataComponentName="Articulo_rfidTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Articulo_rfid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Articulo_rfid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Articulo_rfid] WHERE (([Rfid] = @Original_Rfid) AND ((@IsNull_Id_articulo = 1 AND [Id_articulo] IS NULL) OR ([Id_articulo] = @Original_Id_articulo)) AND ((@IsNull_Disponible = 1 AND [Disponible] IS NULL) OR ([Disponible] = @Original_Disponible)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -73,7 +73,7 @@ SELECT Rfid, Id_articulo, Disponible, Status FROM Articulo_rfid WHERE (Rfid = @R
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ArticulosTableAdapter" GeneratorDataComponentClassName="ArticulosTableAdapter" Name="Articulos" UserDataComponentName="ArticulosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Articulos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Articulos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Articulos] WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNull_Id_categoria = 1 AND [Id_categoria] IS NULL) OR ([Id_categoria] = @Original_Id_categoria)) AND ((@IsNull_Precio_compra = 1 AND [Precio_compra] IS NULL) OR ([Precio_compra] = @Original_Precio_compra)) AND ((@IsNull_Precio_renta = 1 AND [Precio_renta] IS NULL) OR ([Precio_renta] = @Original_Precio_renta)) AND ((@IsNull_Id_provedor = 1 AND [Id_provedor] IS NULL) OR ([Id_provedor] = @Original_Id_provedor)) AND ((@IsNull_Stock = 1 AND [Stock] IS NULL) OR ([Stock] = @Original_Stock)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -171,7 +171,7 @@ SELECT Id, Nombre, Descripcion, Id_categoria, Precio_compra, Precio_renta, Id_pr
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CategoriaTableAdapter" GeneratorDataComponentClassName="CategoriaTableAdapter" Name="Categoria" UserDataComponentName="CategoriaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Categoria" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Categoria" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Categoria] WHERE (([Id] = @Original_Id) AND ([Nombre] = @Original_Nombre) AND ([Status] = @Original_Status))</CommandText>
@@ -221,26 +221,123 @@ SELECT Id, Nombre, Status FROM Categoria WHERE (Id = @Id)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Conf_ModulosTableAdapter" GeneratorDataComponentClassName="Conf_ModulosTableAdapter" Name="Conf_Modulos" UserDataComponentName="Conf_ModulosTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CompañiaTableAdapter" GeneratorDataComponentClassName="CompañiaTableAdapter" Name="Compañia" UserDataComponentName="CompañiaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Conf_Modulos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Compañia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Conf_Modulos] WHERE (([id] = @Original_id) AND ((@IsNull_modulo = 1 AND [modulo] IS NULL) OR ([modulo] = @Original_modulo)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Compañia] WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Municipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Municipio)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_CP = 1 AND [CP] IS NULL) OR ([CP] = @Original_CP)) AND ((@IsNull_Pais = 1 AND [Pais] IS NULL) OR ([Pais] = @Original_Pais)) AND ((@IsNull_RFC = 1 AND [RFC] IS NULL) OR ([RFC] = @Original_RFC)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Direccion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Municipio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Municipio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Municipio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Estado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Pais" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Pais" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Pais" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RFC" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Compañia] ([Nombre], [Direccion], [Municipio], [Estado], [CP], [Pais], [RFC], [Status]) VALUES (@Nombre, @Direccion, @Municipio, @Estado, @CP, @Pais, @RFC, @Status);
+SELECT Id, Nombre, Direccion, Municipio, Estado, CP, Pais, RFC, Status FROM Compañia WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Municipio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Pais" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Nombre, Direccion, Municipio, Estado, CP, Pais, RFC, Status FROM dbo.Compañia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Compañia] SET [Nombre] = @Nombre, [Direccion] = @Direccion, [Municipio] = @Municipio, [Estado] = @Estado, [CP] = @CP, [Pais] = @Pais, [RFC] = @RFC, [Status] = @Status WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Municipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Municipio)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_CP = 1 AND [CP] IS NULL) OR ([CP] = @Original_CP)) AND ((@IsNull_Pais = 1 AND [Pais] IS NULL) OR ([Pais] = @Original_Pais)) AND ((@IsNull_RFC = 1 AND [RFC] IS NULL) OR ([RFC] = @Original_RFC)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)));
+SELECT Id, Nombre, Direccion, Municipio, Estado, CP, Pais, RFC, Status FROM Compañia WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Municipio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Pais" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Direccion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Municipio" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Municipio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Municipio" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Municipio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Estado" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Estado" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Estado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CP" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Pais" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Pais" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Pais" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Pais" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RFC" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RFC" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="MURK.dbo.Compañia" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
+              <Mapping SourceColumn="Municipio" DataSetColumn="Municipio" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="CP" DataSetColumn="CP" />
+              <Mapping SourceColumn="Pais" DataSetColumn="Pais" />
+              <Mapping SourceColumn="RFC" DataSetColumn="RFC" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Conf_ModulosTableAdapter" GeneratorDataComponentClassName="Conf_ModulosTableAdapter" Name="Conf_Modulos" UserDataComponentName="Conf_ModulosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Conf_Modulos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Conf_Modulos] WHERE (([id] = @Original_id) AND ([modulo] = @Original_modulo))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_modulo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Conf_Modulos] ([id], [modulo]) VALUES (@id, @modulo);
-SELECT id, modulo FROM Conf_Modulos WHERE (id = @id)</CommandText>
+SELECT id, modulo FROM Conf_Modulos WHERE (modulo = @modulo)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -252,14 +349,13 @@ SELECT id, modulo FROM Conf_Modulos WHERE (id = @id)</CommandText>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Conf_Modulos] SET [id] = @id, [modulo] = @modulo WHERE (([id] = @Original_id) AND ((@IsNull_modulo = 1 AND [modulo] IS NULL) OR ([modulo] = @Original_modulo)));
-SELECT id, modulo FROM Conf_Modulos WHERE (id = @id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Conf_Modulos] SET [id] = @id, [modulo] = @modulo WHERE (([id] = @Original_id) AND ([modulo] = @Original_modulo));
+SELECT id, modulo FROM Conf_Modulos WHERE (modulo = @modulo)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_modulo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="modulo" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -273,10 +369,25 @@ SELECT id, modulo FROM Conf_Modulos WHERE (id = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Conf_modulos_accionesTableAdapter" GeneratorDataComponentClassName="Conf_modulos_accionesTableAdapter" Name="Conf_modulos_acciones" UserDataComponentName="Conf_modulos_accionesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Conf_modulos_acciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Conf_modulos_acciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Conf_modulos_acciones] WHERE (([Id] = @Original_Id) AND ((@IsNull_Modulo = 1 AND [Modulo] IS NULL) OR ([Modulo] = @Original_Modulo)) AND ((@IsNull_Accion = 1 AND [Accion] IS NULL) OR ([Accion] = @Original_Accion)) AND ((@IsNull_Rfid_usuario = 1 AND [Rfid_usuario] IS NULL) OR ([Rfid_usuario] = @Original_Rfid_usuario)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Modulo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Modulo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Modulo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Accion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Accion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Accion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Accion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Rfid_usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Rfid_usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Rfid_usuario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Rfid_usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Conf_modulos_acciones] ([Modulo], [Accion], [Rfid_usuario]) VALUES (@Modulo, @Accion, @Rfid_usuario)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Conf_modulos_acciones] ([Modulo], [Accion], [Rfid_usuario]) VALUES (@Modulo, @Accion, @Rfid_usuario);
+SELECT Id, Modulo, Accion, Rfid_usuario FROM Conf_modulos_acciones WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Modulo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Accion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Accion" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -286,13 +397,33 @@ SELECT id, modulo FROM Conf_Modulos WHERE (id = @id)</CommandText>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Modulo, Accion, Rfid_usuario FROM dbo.Conf_modulos_acciones</CommandText>
+                    <CommandText>SELECT Id, Modulo, Accion, Rfid_usuario FROM dbo.Conf_modulos_acciones</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Conf_modulos_acciones] SET [Modulo] = @Modulo, [Accion] = @Accion, [Rfid_usuario] = @Rfid_usuario WHERE (([Id] = @Original_Id) AND ((@IsNull_Modulo = 1 AND [Modulo] IS NULL) OR ([Modulo] = @Original_Modulo)) AND ((@IsNull_Accion = 1 AND [Accion] IS NULL) OR ([Accion] = @Original_Accion)) AND ((@IsNull_Rfid_usuario = 1 AND [Rfid_usuario] IS NULL) OR ([Rfid_usuario] = @Original_Rfid_usuario)));
+SELECT Id, Modulo, Accion, Rfid_usuario FROM Conf_modulos_acciones WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Modulo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Accion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Accion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Rfid_usuario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Rfid_usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Modulo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Modulo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Modulo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Modulo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Accion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Accion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Accion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Accion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Rfid_usuario" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Rfid_usuario" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Rfid_usuario" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Rfid_usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="MURK.dbo.Conf_modulos_acciones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="Modulo" DataSetColumn="Modulo" />
               <Mapping SourceColumn="Accion" DataSetColumn="Accion" />
               <Mapping SourceColumn="Rfid_usuario" DataSetColumn="Rfid_usuario" />
@@ -301,7 +432,7 @@ SELECT id, modulo FROM Conf_Modulos WHERE (id = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConfiguracionTableAdapter" GeneratorDataComponentClassName="ConfiguracionTableAdapter" Name="Configuracion" UserDataComponentName="ConfiguracionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Configuracion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Configuracion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Configuracion] WHERE (([Id] = @Original_Id) AND ((@IsNull_Accion = 1 AND [Accion] IS NULL) OR ([Accion] = @Original_Accion)) AND ((@IsNull_Valor = 1 AND [Valor] IS NULL) OR ([Valor] = @Original_Valor)))</CommandText>
@@ -358,7 +489,7 @@ SELECT Id, Accion, Valor FROM Configuracion WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Detalle_entradaTableAdapter" GeneratorDataComponentClassName="Detalle_entradaTableAdapter" Name="Detalle_entrada" UserDataComponentName="Detalle_entradaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Detalle_entrada" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Detalle_entrada" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Detalle_entrada] ([Id_entrada], [Id_articulo], [Cantidad], [Costo_unidad], [Costo_total], [Status]) VALUES (@Id_entrada, @Id_articulo, @Cantidad, @Costo_unidad, @Costo_total, @Status)</CommandText>
@@ -392,7 +523,7 @@ SELECT Id, Accion, Valor FROM Configuracion WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Detalle_prestamo_artTableAdapter" GeneratorDataComponentClassName="Detalle_prestamo_artTableAdapter" Name="Detalle_prestamo_art" UserDataComponentName="Detalle_prestamo_artTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Detalle_prestamo_art" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Detalle_prestamo_art" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Detalle_prestamo_art] WHERE (([Id] = @Original_Id) AND ((@IsNull_Id_prestamo = 1 AND [Id_prestamo] IS NULL) OR ([Id_prestamo] = @Original_Id_prestamo)) AND ((@IsNull_Rfid_articulo = 1 AND [Rfid_articulo] IS NULL) OR ([Rfid_articulo] = @Original_Rfid_articulo)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -456,7 +587,7 @@ SELECT Id, Id_prestamo, Rfid_articulo, Status FROM Detalle_prestamo_art WHERE (I
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Detalle_prestamo_libroTableAdapter" GeneratorDataComponentClassName="Detalle_prestamo_libroTableAdapter" Name="Detalle_prestamo_libro" UserDataComponentName="Detalle_prestamo_libroTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Detalle_prestamo_libro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Detalle_prestamo_libro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Detalle_prestamo_libro] WHERE (([Id] = @Original_Id) AND ((@IsNull_Id_prestamo = 1 AND [Id_prestamo] IS NULL) OR ([Id_prestamo] = @Original_Id_prestamo)) AND ((@IsNull_Rfid_libro = 1 AND [Rfid_libro] IS NULL) OR ([Rfid_libro] = @Original_Rfid_libro)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -519,7 +650,7 @@ SELECT Id, Id_prestamo, Rfid_libro, Status FROM Detalle_prestamo_libro WHERE (Id
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EntradasTableAdapter" GeneratorDataComponentClassName="EntradasTableAdapter" Name="Entradas" UserDataComponentName="EntradasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Entradas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Entradas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Entradas] WHERE (([Id] = @Original_Id) AND ((@IsNull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ((@IsNull_Rfid_empleado = 1 AND [Rfid_empleado] IS NULL) OR ([Rfid_empleado] = @Original_Rfid_empleado)) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNull_No_articulos = 1 AND [No_articulos] IS NULL) OR ([No_articulos] = @Original_No_articulos)) AND ((@IsNull_Importe = 1 AND [Importe] IS NULL) OR ([Importe] = @Original_Importe)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -603,7 +734,7 @@ SELECT Id, Fecha, Rfid_empleado, Descripcion, No_articulos, Importe, Status FROM
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GeneroTableAdapter" GeneratorDataComponentClassName="GeneroTableAdapter" Name="Genero" UserDataComponentName="GeneroTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Genero" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Genero" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Genero] WHERE (([Id] = @Original_Id) AND ((@IsNull_Genero = 1 AND [Genero] IS NULL) OR ([Genero] = @Original_Genero)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -659,7 +790,7 @@ SELECT Id, Genero, Status FROM Genero WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LibroTableAdapter" GeneratorDataComponentClassName="LibroTableAdapter" Name="Libro" UserDataComponentName="LibroTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Libro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Libro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Libro] WHERE (([Id] = @Original_Id) AND ((@IsNull_ISBN = 1 AND [ISBN] IS NULL) OR ([ISBN] = @Original_ISBN)) AND ((@IsNull_Titulo = 1 AND [Titulo] IS NULL) OR ([Titulo] = @Original_Titulo)) AND ((@IsNull_Editorial = 1 AND [Editorial] IS NULL) OR ([Editorial] = @Original_Editorial)) AND ((@IsNull_Autor = 1 AND [Autor] IS NULL) OR ([Autor] = @Original_Autor)) AND ((@IsNull_Id_genero = 1 AND [Id_genero] IS NULL) OR ([Id_genero] = @Original_Id_genero)) AND ((@IsNull_No_paginas = 1 AND [No_paginas] IS NULL) OR ([No_paginas] = @Original_No_paginas)) AND ((@IsNull_Edicion = 1 AND [Edicion] IS NULL) OR ([Edicion] = @Original_Edicion)) AND ((@IsNull_Idioma = 1 AND [Idioma] IS NULL) OR ([Idioma] = @Original_Idioma)) AND ((@IsNull_Precio_compra = 1 AND [Precio_compra] IS NULL) OR ([Precio_compra] = @Original_Precio_compra)) AND ((@IsNull_Stock = 1 AND [Stock] IS NULL) OR ([Stock] = @Original_Stock)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -778,7 +909,7 @@ SELECT Id, ISBN, Titulo, Editorial, Autor, Id_genero, No_paginas, Edicion, Idiom
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Libro_rfidTableAdapter" GeneratorDataComponentClassName="Libro_rfidTableAdapter" Name="Libro_rfid" UserDataComponentName="Libro_rfidTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Libro_rfid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Libro_rfid" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Libro_rfid] WHERE (([Rfid] = @Original_Rfid) AND ((@IsNull_Id_libro = 1 AND [Id_libro] IS NULL) OR ([Id_libro] = @Original_Id_libro)) AND ((@IsNull_Disponible = 1 AND [Disponible] IS NULL) OR ([Disponible] = @Original_Disponible)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -842,7 +973,7 @@ SELECT Rfid, Id_libro, Disponible, Status FROM Libro_rfid WHERE (Rfid = @Rfid)</
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonasTableAdapter" GeneratorDataComponentClassName="PersonasTableAdapter" Name="Personas" UserDataComponentName="PersonasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Personas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Personas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Personas] WHERE (([Id] = @Original_Id) AND ([Nombre] = @Original_Nombre) AND ([Apellido_P] = @Original_Apellido_P) AND ((@IsNull_Apellido_M = 1 AND [Apellido_M] IS NULL) OR ([Apellido_M] = @Original_Apellido_M)) AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNacimiento] = @Original_FechaNacimiento)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Colonia = 1 AND [Colonia] IS NULL) OR ([Colonia] = @Original_Colonia)) AND ((@IsNull_Municipio = 1 AND [Municipio] IS NULL) OR ([Municipio] = @Original_Municipio)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -957,7 +1088,7 @@ SELECT Id, Nombre, Apellido_P, Apellido_M, FechaNacimiento, Direccion, Colonia, 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Prestamo_artTableAdapter" GeneratorDataComponentClassName="Prestamo_artTableAdapter" Name="Prestamo_art" UserDataComponentName="Prestamo_artTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Prestamo_art" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Prestamo_art" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Prestamo_art] WHERE (([Id] = @Original_Id) AND ((@IsNull_Rfid_persona = 1 AND [Rfid_persona] IS NULL) OR ([Rfid_persona] = @Original_Rfid_persona)) AND ((@IsNull_Rfid_empleado = 1 AND [Rfid_empleado] IS NULL) OR ([Rfid_empleado] = @Original_Rfid_empleado)) AND ((@IsNull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ((@IsNull_Fecha_devolucion = 1 AND [Fecha_devolucion] IS NULL) OR ([Fecha_devolucion] = @Original_Fecha_devolucion)) AND ((@IsNull_Dias = 1 AND [Dias] IS NULL) OR ([Dias] = @Original_Dias)) AND ((@IsNull_Importe = 1 AND [Importe] IS NULL) OR ([Importe] = @Original_Importe)) AND ((@IsNull_Tipo_prestamo = 1 AND [Tipo_prestamo] IS NULL) OR ([Tipo_prestamo] = @Original_Tipo_prestamo)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -1055,24 +1186,22 @@ SELECT Id, Rfid_persona, Rfid_empleado, Fecha, Fecha_devolucion, Dias, Importe, 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProvedorTableAdapter" GeneratorDataComponentClassName="ProvedorTableAdapter" Name="Provedor" UserDataComponentName="ProvedorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Provedor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Provedor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Provedor] WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Compañia = 1 AND [Compañia] IS NULL) OR ([Compañia] = @Original_Compañia)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Provedor] WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Id_compañia = 1 AND [Id_compañia] IS NULL) OR ([Id_compañia] = @Original_Id_compañia)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Apellido" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Apellido" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Apellido" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Apellido" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Direccion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Correo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Correo" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Correo" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Telefono" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Compañia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Compañia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compañia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_compañia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_compañia" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -1080,50 +1209,46 @@ SELECT Id, Rfid_persona, Rfid_empleado, Fecha, Fecha_devolucion, Dias, Importe, 
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Provedor] ([Nombre], [Apellido], [Direccion], [Correo], [Telefono], [Compañia], [Status]) VALUES (@Nombre, @Apellido, @Direccion, @Correo, @Telefono, @Compañia, @Status);
-SELECT Id, Nombre, Apellido, Direccion, Correo, Telefono, Compañia, Status FROM Provedor WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Provedor] ([Nombre], [Apellido], [Correo], [Telefono], [Id_compañia], [Status]) VALUES (@Nombre, @Apellido, @Correo, @Telefono, @Id_compañia, @Status);
+SELECT Id, Nombre, Apellido, Correo, Telefono, Id_compañia, Status FROM Provedor WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Apellido" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Apellido" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Correo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Telefono" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Compañia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compañia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_compañia" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, Nombre, Apellido, Direccion, Correo, Telefono, Compañia, Status FROM dbo.Provedor</CommandText>
+                    <CommandText>SELECT Id, Nombre, Apellido, Correo, Telefono, Id_compañia, Status FROM dbo.Provedor</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Provedor] SET [Nombre] = @Nombre, [Apellido] = @Apellido, [Direccion] = @Direccion, [Correo] = @Correo, [Telefono] = @Telefono, [Compañia] = @Compañia, [Status] = @Status WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Compañia = 1 AND [Compañia] IS NULL) OR ([Compañia] = @Original_Compañia)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)));
-SELECT Id, Nombre, Apellido, Direccion, Correo, Telefono, Compañia, Status FROM Provedor WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Provedor] SET [Nombre] = @Nombre, [Apellido] = @Apellido, [Correo] = @Correo, [Telefono] = @Telefono, [Id_compañia] = @Id_compañia, [Status] = @Status WHERE (([Id] = @Original_Id) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Apellido = 1 AND [Apellido] IS NULL) OR ([Apellido] = @Original_Apellido)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Id_compañia = 1 AND [Id_compañia] IS NULL) OR ([Id_compañia] = @Original_Id_compañia)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)));
+SELECT Id, Nombre, Apellido, Correo, Telefono, Id_compañia, Status FROM Provedor WHERE (Id = @Id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Apellido" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Apellido" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Correo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Telefono" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Compañia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compañia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_compañia" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Nombre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Apellido" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Apellido" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Apellido" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Apellido" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Direccion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Direccion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Correo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Correo" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Correo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Correo" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Telefono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Telefono" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Compañia" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Compañia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compañia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Id_compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_compañia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_compañia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_compañia" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="MURK.dbo.Provedor" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -1136,17 +1261,16 @@ SELECT Id, Nombre, Apellido, Direccion, Correo, Telefono, Compañia, Status FROM
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
               <Mapping SourceColumn="Apellido" DataSetColumn="Apellido" />
-              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
               <Mapping SourceColumn="Correo" DataSetColumn="Correo" />
               <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
-              <Mapping SourceColumn="Compañia" DataSetColumn="Compañia" />
+              <Mapping SourceColumn="Id_compañia" DataSetColumn="Id_compañia" />
               <Mapping SourceColumn="Status" DataSetColumn="Status" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RecargosTableAdapter" GeneratorDataComponentClassName="RecargosTableAdapter" Name="Recargos" UserDataComponentName="RecargosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Recargos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Recargos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Recargos] WHERE (([Id] = @Original_Id) AND ((@IsNull_Id_prestamo = 1 AND [Id_prestamo] IS NULL) OR ([Id_prestamo] = @Original_Id_prestamo)) AND ((@IsNull_Dias_retraso = 1 AND [Dias_retraso] IS NULL) OR ([Dias_retraso] = @Original_Dias_retraso)) AND ((@IsNull_Recargo = 1 AND [Recargo] IS NULL) OR ([Recargo] = @Original_Recargo)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -1223,7 +1347,7 @@ SELECT Id, Id_prestamo, Dias_retraso, Recargo, Estado, Status FROM Recargos WHER
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tipo_usuarioTableAdapter" GeneratorDataComponentClassName="Tipo_usuarioTableAdapter" Name="Tipo_usuario" UserDataComponentName="Tipo_usuarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Tipo_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Tipo_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Tipo_usuario] WHERE (([Id] = @Original_Id) AND ((@IsNull_Tipo = 1 AND [Tipo] IS NULL) OR ([Tipo] = @Original_Tipo)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -1279,7 +1403,7 @@ SELECT Id, Tipo, Status FROM Tipo_usuario WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosTableAdapter" GeneratorDataComponentClassName="UsuariosTableAdapter" Name="Usuarios" UserDataComponentName="UsuariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Usuarios] WHERE (([Rfid] = @Original_Rfid) AND ([Id_persona] = @Original_Id_persona) AND ([Id_tipo_usuario] = @Original_Id_tipo_usuario) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
@@ -1337,9 +1461,80 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BuscarLoginTableAdapter" GeneratorDataComponentClassName="BuscarLoginTableAdapter" Name="BuscarLogin" UserDataComponentName="BuscarLoginTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.BuscarLogin" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.BuscarLogin</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@rfid" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_tipo_usuario" DataSetColumn="Id_tipo_usuario" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LoginTableAdapter" GeneratorDataComponentClassName="LoginTableAdapter" Name="Login" UserDataComponentName="LoginTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.Login" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.Login</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@RFID" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Rfid" DataSetColumn="Rfid" />
+              <Mapping SourceColumn="Id_persona" DataSetColumn="Id_persona" />
+              <Mapping SourceColumn="Id_tipo_usuario" DataSetColumn="Id_tipo_usuario" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_GENERO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_GENERO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_GENERO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ALTA_GENERO">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_CATEGORIA" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_CATEGORIA" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_CATEGORIA" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ALTA_CATEGORIA">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ALTA_CATEGORIA</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@cat" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_COMPAÑIA" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_COMPAÑIA" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_COMPAÑIA" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ALTA_COMPAÑIA">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ALTA_COMPAÑIA</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@NOM" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@DIRECCION" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@MUN" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@EST" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@CP" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@PAIS" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@RFC" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_GENERO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_GENERO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_GENERO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ALTA_GENERO">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_GENERO</CommandText>
@@ -1350,7 +1545,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_LIBRO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_LIBRO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_LIBRO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ALTA_LIBRO">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_LIBRO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_LIBRO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_LIBRO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ALTA_LIBRO">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_LIBRO</CommandText>
@@ -1370,7 +1565,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_PERSONA" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_PERSONA" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_PERSONA" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ALTA_PERSONA">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_PERSONA" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_PERSONA" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_PERSONA" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ALTA_PERSONA">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_PERSONA</CommandText>
@@ -1390,7 +1585,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_PROVEEDOR" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_PROVEEDOR" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_PROVEEDOR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ALTA_PROVEEDOR">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_PROVEEDOR" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_PROVEEDOR" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_PROVEEDOR" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="ALTA_PROVEEDOR">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_PROVEEDOR</CommandText>
@@ -1398,15 +1593,14 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@NOM" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@AP" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@DIR" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@EMAIL" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@TEL" Precision="19" ProviderType="BigInt" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@COMP" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@COMP" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_RECARGO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_RECARGO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_RECARGO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ALTA_RECARGO">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_RECARGO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_RECARGO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_RECARGO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="ALTA_RECARGO">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_RECARGO</CommandText>
@@ -1420,7 +1614,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_RFID_LIBRO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_RFID_LIBRO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_RFID_LIBRO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="ALTA_RFID_LIBRO">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_RFID_LIBRO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_RFID_LIBRO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_RFID_LIBRO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="ALTA_RFID_LIBRO">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_RFID_LIBRO</CommandText>
@@ -1432,7 +1626,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_TIPO_USUARIO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_TIPO_USUARIO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_TIPO_USUARIO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="ALTA_TIPO_USUARIO">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_TIPO_USUARIO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_TIPO_USUARIO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_TIPO_USUARIO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="ALTA_TIPO_USUARIO">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_TIPO_USUARIO</CommandText>
@@ -1443,7 +1637,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="MURKConnectionString (Settings)" DbObjectName="MURK.dbo.ALTA_USUARIO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_USUARIO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_USUARIO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="ALTA_USUARIO">
+          <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.ALTA_USUARIO" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ALTA_USUARIO" MethodsParameterType="CLR" Modifier="Public" Name="ALTA_USUARIO" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="ALTA_USUARIO">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ALTA_USUARIO</CommandText>
@@ -1521,11 +1715,68 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Compañia" msprop:Generator_TableClassName="CompañiaDataTable" msprop:Generator_TableVarName="tableCompañia" msprop:Generator_TablePropName="Compañia" msprop:Generator_RowDeletingName="CompañiaRowDeleting" msprop:Generator_RowChangingName="CompañiaRowChanging" msprop:Generator_RowEvHandlerName="CompañiaRowChangeEventHandler" msprop:Generator_RowDeletedName="CompañiaRowDeleted" msprop:Generator_UserTableName="Compañia" msprop:Generator_RowChangedName="CompañiaRowChanged" msprop:Generator_RowEvArgName="CompañiaRowChangeEvent" msprop:Generator_RowClassName="CompañiaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Municipio" msprop:Generator_ColumnVarNameInTable="columnMunicipio" msprop:Generator_ColumnPropNameInRow="Municipio" msprop:Generator_ColumnPropNameInTable="MunicipioColumn" msprop:Generator_UserColumnName="Municipio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CP" msprop:Generator_ColumnVarNameInTable="columnCP" msprop:Generator_ColumnPropNameInRow="CP" msprop:Generator_ColumnPropNameInTable="CPColumn" msprop:Generator_UserColumnName="CP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pais" msprop:Generator_ColumnVarNameInTable="columnPais" msprop:Generator_ColumnPropNameInRow="Pais" msprop:Generator_ColumnPropNameInTable="PaisColumn" msprop:Generator_UserColumnName="Pais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_UserColumnName="RFC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="Conf_Modulos" msprop:Generator_TableClassName="Conf_ModulosDataTable" msprop:Generator_TableVarName="tableConf_Modulos" msprop:Generator_TablePropName="Conf_Modulos" msprop:Generator_RowDeletingName="Conf_ModulosRowDeleting" msprop:Generator_RowChangingName="Conf_ModulosRowChanging" msprop:Generator_RowEvHandlerName="Conf_ModulosRowChangeEventHandler" msprop:Generator_RowDeletedName="Conf_ModulosRowDeleted" msprop:Generator_UserTableName="Conf_Modulos" msprop:Generator_RowChangedName="Conf_ModulosRowChanged" msprop:Generator_RowEvArgName="Conf_ModulosRowChangeEvent" msprop:Generator_RowClassName="Conf_ModulosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="modulo" msprop:Generator_ColumnVarNameInTable="columnmodulo" msprop:Generator_ColumnPropNameInRow="modulo" msprop:Generator_ColumnPropNameInTable="moduloColumn" msprop:Generator_UserColumnName="modulo" minOccurs="0">
+              <xs:element name="modulo" msprop:Generator_ColumnVarNameInTable="columnmodulo" msprop:Generator_ColumnPropNameInRow="modulo" msprop:Generator_ColumnPropNameInTable="moduloColumn" msprop:Generator_UserColumnName="modulo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1538,6 +1789,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
         <xs:element name="Conf_modulos_acciones" msprop:Generator_TableClassName="Conf_modulos_accionesDataTable" msprop:Generator_TableVarName="tableConf_modulos_acciones" msprop:Generator_TablePropName="Conf_modulos_acciones" msprop:Generator_RowDeletingName="Conf_modulos_accionesRowDeleting" msprop:Generator_RowChangingName="Conf_modulos_accionesRowChanging" msprop:Generator_RowEvHandlerName="Conf_modulos_accionesRowChangeEventHandler" msprop:Generator_RowDeletedName="Conf_modulos_accionesRowDeleted" msprop:Generator_UserTableName="Conf_modulos_acciones" msprop:Generator_RowChangedName="Conf_modulos_accionesRowChanged" msprop:Generator_RowEvArgName="Conf_modulos_accionesRowChangeEvent" msprop:Generator_RowClassName="Conf_modulos_accionesRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="Modulo" msprop:Generator_ColumnVarNameInTable="columnModulo" msprop:Generator_ColumnPropNameInRow="Modulo" msprop:Generator_ColumnPropNameInTable="ModuloColumn" msprop:Generator_UserColumnName="Modulo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1848,13 +2100,6 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1863,13 +2108,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono" type="xs:long" minOccurs="0" />
-              <xs:element name="Compañia" msprop:Generator_ColumnVarNameInTable="columnCompañia" msprop:Generator_ColumnPropNameInRow="Compañia" msprop:Generator_ColumnPropNameInTable="CompañiaColumn" msprop:Generator_UserColumnName="Compañia" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Id_compañia" msprop:Generator_ColumnVarNameInTable="columnId_compañia" msprop:Generator_ColumnPropNameInRow="Id_compañia" msprop:Generator_ColumnPropNameInTable="Id_compañiaColumn" msprop:Generator_UserColumnName="Id_compañia" type="xs:int" minOccurs="0" />
               <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
@@ -1923,6 +2162,37 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="BuscarLogin" msprop:Generator_TableClassName="BuscarLoginDataTable" msprop:Generator_TableVarName="tableBuscarLogin" msprop:Generator_TablePropName="BuscarLogin" msprop:Generator_RowDeletingName="BuscarLoginRowDeleting" msprop:Generator_RowChangingName="BuscarLoginRowChanging" msprop:Generator_RowEvHandlerName="BuscarLoginRowChangeEventHandler" msprop:Generator_RowDeletedName="BuscarLoginRowDeleted" msprop:Generator_UserTableName="BuscarLogin" msprop:Generator_RowChangedName="BuscarLoginRowChanged" msprop:Generator_RowEvArgName="BuscarLoginRowChangeEvent" msprop:Generator_RowClassName="BuscarLoginRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_tipo_usuario" msprop:Generator_ColumnVarNameInTable="columnId_tipo_usuario" msprop:Generator_ColumnPropNameInRow="Id_tipo_usuario" msprop:Generator_ColumnPropNameInTable="Id_tipo_usuarioColumn" msprop:Generator_UserColumnName="Id_tipo_usuario" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Login" msprop:Generator_TableClassName="LoginDataTable" msprop:Generator_TableVarName="tableLogin" msprop:Generator_TablePropName="Login" msprop:Generator_RowDeletingName="LoginRowDeleting" msprop:Generator_RowChangingName="LoginRowChanging" msprop:Generator_RowEvHandlerName="LoginRowChangeEventHandler" msprop:Generator_RowDeletedName="LoginRowDeleted" msprop:Generator_UserTableName="Login" msprop:Generator_RowChangedName="LoginRowChanged" msprop:Generator_RowEvArgName="LoginRowChangeEvent" msprop:Generator_RowClassName="LoginRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Rfid" msprop:Generator_ColumnVarNameInTable="columnRfid" msprop:Generator_ColumnPropNameInRow="Rfid" msprop:Generator_ColumnPropNameInTable="RfidColumn" msprop:Generator_UserColumnName="Rfid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_persona" msprop:Generator_ColumnVarNameInTable="columnId_persona" msprop:Generator_ColumnPropNameInRow="Id_persona" msprop:Generator_ColumnPropNameInTable="Id_personaColumn" msprop:Generator_UserColumnName="Id_persona" type="xs:int" />
+              <xs:element name="Id_tipo_usuario" msprop:Generator_ColumnVarNameInTable="columnId_tipo_usuario" msprop:Generator_ColumnPropNameInRow="Id_tipo_usuario" msprop:Generator_ColumnPropNameInTable="Id_tipo_usuarioColumn" msprop:Generator_UserColumnName="Id_tipo_usuario" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1937,9 +2207,17 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
       <xs:selector xpath=".//mstns:Categoria" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
+    <xs:unique name="Compañia_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Compañia" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
     <xs:unique name="Conf_Modulos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Conf_Modulos" />
-      <xs:field xpath="mstns:id" />
+      <xs:field xpath="mstns:modulo" />
+    </xs:unique>
+    <xs:unique name="Conf_modulos_acciones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Conf_modulos_acciones" />
+      <xs:field xpath="mstns:Id" />
     </xs:unique>
     <xs:unique name="Configuracion_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Configuracion" />
@@ -1993,12 +2271,18 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
       <xs:selector xpath=".//mstns:Usuarios" />
       <xs:field xpath="mstns:Rfid" />
     </xs:unique>
+    <xs:unique name="Login_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Login" />
+      <xs:field xpath="mstns:Rfid" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
       <msdata:Relationship name="FK_Articulo_rfid_Articulos" msdata:parent="Articulos" msdata:child="Articulo_rfid" msdata:parentkey="Id" msdata:childkey="Id_articulo" msprop:Generator_UserChildTable="Articulo_rfid" msprop:Generator_ChildPropName="GetArticulo_rfidRows" msprop:Generator_UserRelationName="FK_Articulo_rfid_Articulos" msprop:Generator_RelationVarName="relationFK_Articulo_rfid_Articulos" msprop:Generator_UserParentTable="Articulos" msprop:Generator_ParentPropName="ArticulosRow" />
       <msdata:Relationship name="FK_Articulos_Categoria" msdata:parent="Categoria" msdata:child="Articulos" msdata:parentkey="Id" msdata:childkey="Id_categoria" msprop:Generator_UserChildTable="Articulos" msprop:Generator_ChildPropName="GetArticulosRows" msprop:Generator_UserRelationName="FK_Articulos_Categoria" msprop:Generator_RelationVarName="relationFK_Articulos_Categoria" msprop:Generator_UserParentTable="Categoria" msprop:Generator_ParentPropName="CategoriaRow" />
       <msdata:Relationship name="FK_Articulos_Provedor" msdata:parent="Provedor" msdata:child="Articulos" msdata:parentkey="Id" msdata:childkey="Id_provedor" msprop:Generator_UserChildTable="Articulos" msprop:Generator_ChildPropName="GetArticulosRows" msprop:Generator_UserRelationName="FK_Articulos_Provedor" msprop:Generator_RelationVarName="relationFK_Articulos_Provedor" msprop:Generator_UserParentTable="Provedor" msprop:Generator_ParentPropName="ProvedorRow" />
+      <msdata:Relationship name="FK_Conf_modulos_acciones_Conf_Modulos" msdata:parent="Conf_Modulos" msdata:child="Conf_modulos_acciones" msdata:parentkey="modulo" msdata:childkey="Modulo" msprop:Generator_UserChildTable="Conf_modulos_acciones" msprop:Generator_ChildPropName="GetConf_modulos_accionesRows" msprop:Generator_UserRelationName="FK_Conf_modulos_acciones_Conf_Modulos" msprop:Generator_ParentPropName="Conf_ModulosRow" msprop:Generator_RelationVarName="relationFK_Conf_modulos_acciones_Conf_Modulos" msprop:Generator_UserParentTable="Conf_Modulos" />
+      <msdata:Relationship name="FK_Conf_modulos_acciones_Usuarios" msdata:parent="Usuarios" msdata:child="Conf_modulos_acciones" msdata:parentkey="Rfid" msdata:childkey="Rfid_usuario" msprop:Generator_UserChildTable="Conf_modulos_acciones" msprop:Generator_ChildPropName="GetConf_modulos_accionesRows" msprop:Generator_UserRelationName="FK_Conf_modulos_acciones_Usuarios" msprop:Generator_RelationVarName="relationFK_Conf_modulos_acciones_Usuarios" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRow" />
       <msdata:Relationship name="FK_Detalle_entrada_Articulos" msdata:parent="Articulos" msdata:child="Detalle_entrada" msdata:parentkey="Id" msdata:childkey="Id_articulo" msprop:Generator_UserChildTable="Detalle_entrada" msprop:Generator_ChildPropName="GetDetalle_entradaRows" msprop:Generator_UserRelationName="FK_Detalle_entrada_Articulos" msprop:Generator_ParentPropName="ArticulosRow" msprop:Generator_RelationVarName="relationFK_Detalle_entrada_Articulos" msprop:Generator_UserParentTable="Articulos" />
       <msdata:Relationship name="FK_Detalle_entrada_Entradas" msdata:parent="Entradas" msdata:child="Detalle_entrada" msdata:parentkey="Id" msdata:childkey="Id_entrada" msprop:Generator_UserChildTable="Detalle_entrada" msprop:Generator_ChildPropName="GetDetalle_entradaRows" msprop:Generator_UserRelationName="FK_Detalle_entrada_Entradas" msprop:Generator_RelationVarName="relationFK_Detalle_entrada_Entradas" msprop:Generator_UserParentTable="Entradas" msprop:Generator_ParentPropName="EntradasRow" />
       <msdata:Relationship name="FK_Detalle_prestamo_art_Articulo_rfid" msdata:parent="Articulo_rfid" msdata:child="Detalle_prestamo_art" msdata:parentkey="Rfid" msdata:childkey="Rfid_articulo" msprop:Generator_UserChildTable="Detalle_prestamo_art" msprop:Generator_ChildPropName="GetDetalle_prestamo_artRows" msprop:Generator_UserRelationName="FK_Detalle_prestamo_art_Articulo_rfid" msprop:Generator_ParentPropName="Articulo_rfidRow" msprop:Generator_RelationVarName="relationFK_Detalle_prestamo_art_Articulo_rfid" msprop:Generator_UserParentTable="Articulo_rfid" />
@@ -2010,6 +2294,7 @@ SELECT Rfid, Id_persona, Id_tipo_usuario, Status FROM Usuarios WHERE (Rfid = @Rf
       <msdata:Relationship name="FK_Libro_rfid_Libro" msdata:parent="Libro" msdata:child="Libro_rfid" msdata:parentkey="Id" msdata:childkey="Id_libro" msprop:Generator_UserChildTable="Libro_rfid" msprop:Generator_ChildPropName="GetLibro_rfidRows" msprop:Generator_UserRelationName="FK_Libro_rfid_Libro" msprop:Generator_ParentPropName="LibroRow" msprop:Generator_RelationVarName="relationFK_Libro_rfid_Libro" msprop:Generator_UserParentTable="Libro" />
       <msdata:Relationship name="FK_Prestamo_art_Usuarios" msdata:parent="Usuarios" msdata:child="Prestamo_art" msdata:parentkey="Rfid" msdata:childkey="Rfid_empleado" msprop:Generator_UserChildTable="Prestamo_art" msprop:Generator_ChildPropName="GetPrestamo_artRowsByFK_Prestamo_art_Usuarios" msprop:Generator_UserRelationName="FK_Prestamo_art_Usuarios" msprop:Generator_RelationVarName="relationFK_Prestamo_art_Usuarios" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRowByFK_Prestamo_art_Usuarios" />
       <msdata:Relationship name="FK_Prestamo_art_Usuarios1" msdata:parent="Usuarios" msdata:child="Prestamo_art" msdata:parentkey="Rfid" msdata:childkey="Rfid_persona" msprop:Generator_UserChildTable="Prestamo_art" msprop:Generator_ChildPropName="GetPrestamo_artRowsByFK_Prestamo_art_Usuarios1" msprop:Generator_UserRelationName="FK_Prestamo_art_Usuarios1" msprop:Generator_RelationVarName="relationFK_Prestamo_art_Usuarios1" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRowByFK_Prestamo_art_Usuarios1" />
+      <msdata:Relationship name="FK_Provedor_Compañia" msdata:parent="Compañia" msdata:child="Provedor" msdata:parentkey="Id" msdata:childkey="Id_compañia" msprop:Generator_UserChildTable="Provedor" msprop:Generator_ChildPropName="GetProvedorRows" msprop:Generator_UserRelationName="FK_Provedor_Compañia" msprop:Generator_ParentPropName="CompañiaRow" msprop:Generator_RelationVarName="relationFK_Provedor_Compañia" msprop:Generator_UserParentTable="Compañia" />
       <msdata:Relationship name="FK_Recargos_Prestamo_art" msdata:parent="Prestamo_art" msdata:child="Recargos" msdata:parentkey="Id" msdata:childkey="Id_prestamo" msprop:Generator_UserChildTable="Recargos" msprop:Generator_ChildPropName="GetRecargosRows" msprop:Generator_UserRelationName="FK_Recargos_Prestamo_art" msprop:Generator_ParentPropName="Prestamo_artRow" msprop:Generator_RelationVarName="relationFK_Recargos_Prestamo_art" msprop:Generator_UserParentTable="Prestamo_art" />
       <msdata:Relationship name="FK_Usuarios_Personas" msdata:parent="Personas" msdata:child="Usuarios" msdata:parentkey="Id" msdata:childkey="Id_persona" msprop:Generator_UserChildTable="Usuarios" msprop:Generator_ChildPropName="GetUsuariosRows" msprop:Generator_UserRelationName="FK_Usuarios_Personas" msprop:Generator_ParentPropName="PersonasRow" msprop:Generator_RelationVarName="relationFK_Usuarios_Personas" msprop:Generator_UserParentTable="Personas" />
       <msdata:Relationship name="FK_Usuarios_Tipo_usuario" msdata:parent="Tipo_usuario" msdata:child="Usuarios" msdata:parentkey="Id" msdata:childkey="Id_tipo_usuario" msprop:Generator_UserChildTable="Usuarios" msprop:Generator_ChildPropName="GetUsuariosRows" msprop:Generator_UserRelationName="FK_Usuarios_Tipo_usuario" msprop:Generator_ParentPropName="Tipo_usuarioRow" msprop:Generator_RelationVarName="relationFK_Usuarios_Tipo_usuario" msprop:Generator_UserParentTable="Tipo_usuario" />

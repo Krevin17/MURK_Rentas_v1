@@ -22,5 +22,7 @@ namespace MURK_Rentas
             FormProveedor FPro = new FormProveedor();
             FPro.Show();
         }
+
+        
     }
 }

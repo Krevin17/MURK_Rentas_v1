@@ -32,5 +32,15 @@ namespace MURK_Rentas.Properties {
                 return ((string)(this["MURKConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=MURK;Integrated Security=True")]
+        public string MURKConnectionString1 {
+            get {
+                return ((string)(this["MURKConnectionString1"]));
+            }
+        }
     }
 }

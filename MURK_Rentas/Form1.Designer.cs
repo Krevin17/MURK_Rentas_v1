@@ -39,6 +39,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.lbRFID = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,6 +155,17 @@
             this.lbRFID.Size = new System.Drawing.Size(7, 13);
             this.lbRFID.TabIndex = 8;
             this.lbRFID.Text = "\r\n";
+            this.lbRFID.TextChanged += new System.EventHandler(this.lbRFID_TextChanged);
+            // 
+            // lbNombre
+            // 
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbNombre.Location = new System.Drawing.Point(2, 241);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(27, 13);
+            this.lbNombre.TabIndex = 9;
+            this.lbNombre.Text = "nom";
             // 
             // Form1
             // 
@@ -161,6 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(241, 294);
+            this.Controls.Add(this.lbNombre);
             this.Controls.Add(this.lbRFID);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.lbPort);
@@ -192,6 +205,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label lbRFID;
+        private System.Windows.Forms.Label lbNombre;
     }
 }
 
