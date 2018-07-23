@@ -58,10 +58,7 @@ namespace MURK_Rentas
         {
             con = new System.Data.SqlClient.SqlConnection(); //llamar conexion al form load
             con.ConnectionString = "Data Source=localhost;Initial Catalog=MURK;Integrated Security=True";
-
-            comboBox1.DataSource = listaCompañias();
-            comboBox1.DisplayMember = "NOMBRE";
-            comboBox1.ValueMember = "ID";
+            cargarCompañias();
         }
 
         public DataTable listaCompañias()
@@ -78,6 +75,57 @@ namespace MURK_Rentas
             leerFilas.Close();
             con.Close();
             return tablaComp;
+        }
+
+        public void cargarCompañias()
+        {
+            comboBox1.DataSource = listaCompañias();
+            comboBox1.DisplayMember = "NOMBRE";
+            comboBox1.ValueMember = "ID";
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.TabPages[1];
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand query = con.CreateCommand();//crea comando
+                query.CommandType = CommandType.Text;
+                query.CommandText = string.Format("EXEC ALTA_COMPAÑIA'" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "','" + textBox11.Text + "'");
+                int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                if (result > 0)
+                {
+                    MessageBox.Show("Registro almacenado exitosamente");
+                    textBox5.Text = "";
+                    textBox6.Text = "";
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                    textBox9.Text = "";
+                    textBox10.Text = "";
+                    textBox11.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo almacenar el registro");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error-catch");
+            }
+            finally
+            {
+                if (con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                    cargarCompañias();
+                }
+            }
         }
     }
 }

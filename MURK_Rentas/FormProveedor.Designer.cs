@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabEmpresa = new System.Windows.Forms.TabPage();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -54,8 +55,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tabPage3.SuspendLayout();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabEmpresa.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -101,65 +105,68 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // tabPage3
+            // tabEmpresa
             // 
-            this.tabPage3.Controls.Add(this.textBox10);
-            this.tabPage3.Controls.Add(this.textBox9);
-            this.tabPage3.Controls.Add(this.textBox8);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Controls.Add(this.textBox6);
-            this.tabPage3.Controls.Add(this.textBox5);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(490, 275);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Empresa";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabEmpresa.Controls.Add(this.button2);
+            this.tabEmpresa.Controls.Add(this.textBox11);
+            this.tabEmpresa.Controls.Add(this.label12);
+            this.tabEmpresa.Controls.Add(this.textBox10);
+            this.tabEmpresa.Controls.Add(this.textBox9);
+            this.tabEmpresa.Controls.Add(this.textBox8);
+            this.tabEmpresa.Controls.Add(this.textBox7);
+            this.tabEmpresa.Controls.Add(this.textBox6);
+            this.tabEmpresa.Controls.Add(this.textBox5);
+            this.tabEmpresa.Controls.Add(this.label11);
+            this.tabEmpresa.Controls.Add(this.label10);
+            this.tabEmpresa.Controls.Add(this.label9);
+            this.tabEmpresa.Controls.Add(this.label8);
+            this.tabEmpresa.Controls.Add(this.label7);
+            this.tabEmpresa.Controls.Add(this.label6);
+            this.tabEmpresa.Location = new System.Drawing.Point(4, 25);
+            this.tabEmpresa.Name = "tabEmpresa";
+            this.tabEmpresa.Size = new System.Drawing.Size(490, 275);
+            this.tabEmpresa.TabIndex = 2;
+            this.tabEmpresa.Text = "Empresa";
+            this.tabEmpresa.UseVisualStyleBackColor = true;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(189, 196);
+            this.textBox10.Location = new System.Drawing.Point(190, 168);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(265, 22);
             this.textBox10.TabIndex = 30;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(189, 168);
+            this.textBox9.Location = new System.Drawing.Point(190, 140);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(265, 22);
             this.textBox9.TabIndex = 28;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(189, 139);
+            this.textBox8.Location = new System.Drawing.Point(190, 111);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(265, 22);
             this.textBox8.TabIndex = 27;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(189, 107);
+            this.textBox7.Location = new System.Drawing.Point(190, 79);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(265, 22);
             this.textBox7.TabIndex = 24;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(189, 76);
+            this.textBox6.Location = new System.Drawing.Point(190, 48);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(265, 22);
             this.textBox6.TabIndex = 23;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(189, 47);
+            this.textBox5.Location = new System.Drawing.Point(190, 19);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(265, 22);
             this.textBox5.TabIndex = 22;
@@ -220,6 +227,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.linkLabel1);
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.textBox4);
@@ -238,6 +246,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Proveedor";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Agregar..."});
+            this.comboBox1.Location = new System.Drawing.Point(178, 179);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(265, 24);
+            this.comboBox1.TabIndex = 33;
             // 
             // label5
             // 
@@ -316,7 +334,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabEmpresa);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -325,13 +343,53 @@
             this.tabControl1.Size = new System.Drawing.Size(498, 304);
             this.tabControl1.TabIndex = 28;
             // 
-            // comboBox1
+            // linkLabel1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(178, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 24);
-            this.comboBox1.TabIndex = 33;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(321, 220);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(122, 16);
+            this.linkLabel1.TabIndex = 34;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Agregar Compañia";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(32, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 16);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Nombre";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(190, 196);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(265, 22);
+            this.textBox11.TabIndex = 32;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(71)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(355, 224);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 30);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Guardar";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormProveedor
             // 
@@ -346,8 +404,8 @@
             this.Name = "FormProveedor";
             this.Text = "FormProveedor";
             this.Load += new System.EventHandler(this.FormProveedor_Load);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabEmpresa.ResumeLayout(false);
+            this.tabEmpresa.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -359,7 +417,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabEmpresa;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
@@ -386,5 +444,9 @@
         private MURKDataSet mURKDataSet;
         private MURKDataSetTableAdapters.CompañiaTableAdapter compañiaTableAdapter;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label12;
     }
 }
