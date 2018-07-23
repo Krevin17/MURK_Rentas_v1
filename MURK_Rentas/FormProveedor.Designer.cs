@@ -126,7 +126,7 @@
             this.tabEmpresa.Name = "tabEmpresa";
             this.tabEmpresa.Size = new System.Drawing.Size(490, 275);
             this.tabEmpresa.TabIndex = 2;
-            this.tabEmpresa.Text = "Empresa";
+            this.tabEmpresa.Text = "Compañia";
             this.tabEmpresa.UseVisualStyleBackColor = true;
             // 
             // textBox10
