@@ -90,5 +90,10 @@ namespace MURK_Rentas
         {
 
         }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
