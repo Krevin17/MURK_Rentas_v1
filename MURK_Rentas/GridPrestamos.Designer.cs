@@ -116,6 +116,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GridPrestamos";
             this.Text = "GridPrestamos";
             this.ResumeLayout(false);

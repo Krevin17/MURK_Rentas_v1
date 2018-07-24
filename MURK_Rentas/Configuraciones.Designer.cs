@@ -115,6 +115,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEditar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Configuraciones";
             this.Text = "Configuraciones";
             this.ResumeLayout(false);

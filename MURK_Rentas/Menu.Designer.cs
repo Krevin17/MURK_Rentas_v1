@@ -43,9 +43,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbPort_menu = new System.Windows.Forms.Label();
-            this.lbRFID_menu = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbRFID_menu = new System.Windows.Forms.Label();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -246,7 +247,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(170, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(934, 54);
+            this.panel2.Size = new System.Drawing.Size(934, 50);
             this.panel2.TabIndex = 3;
             // 
             // panel1
@@ -272,27 +273,6 @@
             this.lbPort_menu.Size = new System.Drawing.Size(0, 16);
             this.lbPort_menu.TabIndex = 0;
             // 
-            // lbRFID_menu
-            // 
-            this.lbRFID_menu.AutoSize = true;
-            this.lbRFID_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRFID_menu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbRFID_menu.Location = new System.Drawing.Point(87, 12);
-            this.lbRFID_menu.Name = "lbRFID_menu";
-            this.lbRFID_menu.Size = new System.Drawing.Size(0, 16);
-            this.lbRFID_menu.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(223, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Puerto:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -305,17 +285,47 @@
             this.label3.Text = "Usuario:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(223, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Puerto:";
+            // 
+            // lbRFID_menu
+            // 
+            this.lbRFID_menu.AutoSize = true;
+            this.lbRFID_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRFID_menu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbRFID_menu.Location = new System.Drawing.Point(87, 12);
+            this.lbRFID_menu.Name = "lbRFID_menu";
+            this.lbRFID_menu.Size = new System.Drawing.Size(0, 16);
+            this.lbRFID_menu.TabIndex = 1;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(170, 50);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(934, 445);
+            this.panelContenedor.TabIndex = 7;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1104, 531);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IsMdiContainer = true;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -347,5 +357,6 @@
         public System.Windows.Forms.Label lbPort_menu;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelContenedor;
     }
 }

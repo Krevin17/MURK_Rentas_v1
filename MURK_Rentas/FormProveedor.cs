@@ -124,8 +124,14 @@ namespace MURK_Rentas
                 {
                     con.Close();
                     cargarCompañias();
+                    tabControl1.SelectedTab = tabControl1.TabPages[0];
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

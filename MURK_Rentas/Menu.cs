@@ -12,20 +12,26 @@ namespace MURK_Rentas
 {
     public partial class Menu : Form
     {
-       
-
         public Menu()
         {
             InitializeComponent();
         }
 
+        private void AbrirGridInPanel(object FormHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = FormHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            GridUsuarios us = new GridUsuarios();
-            us.MdiParent = this;
-            us.Show();
-            button1.Enabled = false;
-            us.lbPort.Text = lbPort_menu.Text;
+            AbrirGridInPanel(new GridUsuarios());
 
         }
 
@@ -47,51 +53,32 @@ namespace MURK_Rentas
 
         private void button6_Click(object sender, EventArgs e)
         {
-            GridProductos gp = new GridProductos();
-            gp.MdiParent = this;
-            gp.Show();
-            button6.Enabled = false;
+            AbrirGridInPanel(new GridProductos());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GridInventario gi = new GridInventario();
-            gi.MdiParent = this;
-            gi.Show();
-            button2.Enabled = false;
-
+            AbrirGridInPanel(new GridInventario());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            GridProveedores gpv = new GridProveedores();
-            gpv.MdiParent = this;
-            gpv.Show();
-            button3.Enabled = false;
+            AbrirGridInPanel(new GridProveedores());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            GridEntradas ge = new GridEntradas();
-            ge.MdiParent = this;
-            ge.Show();
-            button4.Enabled = false;
+            AbrirGridInPanel(new GridEntradas());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Configuraciones config = new Configuraciones();
-            config.MdiParent = this;
-            config.Show();
-            button5.Enabled = false;
+            AbrirGridInPanel(new Configuraciones());
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            GridPrestamos gpres = new GridPrestamos();
-            gpres.MdiParent = this;
-            gpres.Show();
-            button7.Enabled = false;
+            AbrirGridInPanel(new GridPrestamos());
         }
 
         private void button8_Click(object sender, EventArgs e)

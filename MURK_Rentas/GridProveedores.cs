@@ -23,6 +23,5 @@ namespace MURK_Rentas
             FPro.Show();
         }
 
-        
     }
 }

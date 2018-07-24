@@ -93,6 +93,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEditar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GridInventario";
             this.Text = "GridInventario";
             this.ResumeLayout(false);

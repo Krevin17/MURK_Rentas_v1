@@ -117,6 +117,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEditar);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GridProductos";
             this.Text = "GridProductos";
             this.ResumeLayout(false);

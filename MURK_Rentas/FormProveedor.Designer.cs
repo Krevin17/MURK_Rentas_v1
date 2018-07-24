@@ -83,6 +83,7 @@
             this.button1.Text = "Cancelar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGuardar
             // 
@@ -124,7 +125,7 @@
             this.tabEmpresa.Controls.Add(this.label6);
             this.tabEmpresa.Location = new System.Drawing.Point(4, 25);
             this.tabEmpresa.Name = "tabEmpresa";
-            this.tabEmpresa.Size = new System.Drawing.Size(490, 275);
+            this.tabEmpresa.Size = new System.Drawing.Size(480, 275);
             this.tabEmpresa.TabIndex = 2;
             this.tabEmpresa.Text = "Compañia";
             this.tabEmpresa.UseVisualStyleBackColor = true;
@@ -242,7 +243,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(490, 275);
+            this.tabPage2.Size = new System.Drawing.Size(480, 275);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Proveedor";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -340,7 +341,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(498, 304);
+            this.tabControl1.Size = new System.Drawing.Size(488, 304);
             this.tabControl1.TabIndex = 28;
             // 
             // linkLabel1
@@ -359,9 +360,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(32, 19);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 16);
+            this.label12.Size = new System.Drawing.Size(70, 16);
             this.label12.TabIndex = 31;
-            this.label12.Text = "Nombre";
+            this.label12.Text = "Compañia";
             // 
             // textBox11
             // 
@@ -382,7 +383,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(355, 224);
+            this.button2.Location = new System.Drawing.Point(355, 242);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 30);
             this.button2.TabIndex = 33;
