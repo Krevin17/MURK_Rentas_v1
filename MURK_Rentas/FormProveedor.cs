@@ -133,5 +133,10 @@ namespace MURK_Rentas
         {
             Close();
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

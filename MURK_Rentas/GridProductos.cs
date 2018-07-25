@@ -22,5 +22,12 @@ namespace MURK_Rentas
             FormArticulos FA = new FormArticulos();
             FA.Show();
         }
+
+        private void GridProductos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'mURKDataSet.V_ARTICULOS' Puede moverla o quitarla según sea necesario.
+            this.v_ARTICULOSTableAdapter.Fill(this.mURKDataSet.V_ARTICULOS);
+
+        }
     }
 }

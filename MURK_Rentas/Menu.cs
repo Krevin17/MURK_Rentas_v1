@@ -32,7 +32,6 @@ namespace MURK_Rentas
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirGridInPanel(new GridUsuarios());
-
         }
 
 
@@ -48,7 +47,6 @@ namespace MURK_Rentas
                 MenuVertical.Width = 170;
                 btnmenu2.Visible = false;
                 btnmenu0.Visible = true;
-            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -81,17 +79,7 @@ namespace MURK_Rentas
             AbrirGridInPanel(new GridPrestamos());
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(lbPort_menu.Text);
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
 
         }

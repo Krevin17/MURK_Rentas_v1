@@ -47,6 +47,7 @@ namespace MURK_Rentas
                 if (con.State != ConnectionState.Closed)
                 {
                     con.Close();
+                    this.Close();
                 }
             }
         }
@@ -55,6 +56,11 @@ namespace MURK_Rentas
         {
             con = new System.Data.SqlClient.SqlConnection(); //llamar conexion al form load
             con.ConnectionString = "Data Source=localhost;Initial Catalog=MURK;Integrated Security=True";
+        }
+
+        private void FormCategoria_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

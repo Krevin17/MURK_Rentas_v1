@@ -116,6 +116,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormCategoria";
             this.Text = "FormCategoria";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCategoria_FormClosing);
             this.Load += new System.EventHandler(this.FormCategoria_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
