@@ -31,6 +31,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbID = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -45,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tituloForm = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +63,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Transparent;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(557, 37);
+            this.btnGuardar.Location = new System.Drawing.Point(557, 88);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 30);
             this.btnGuardar.TabIndex = 22;
@@ -74,7 +76,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(23, 37);
+            this.tabControl1.Location = new System.Drawing.Point(28, 63);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -83,6 +85,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lbID);
             this.tabPage2.Controls.Add(this.linkLabel2);
             this.tabPage2.Controls.Add(this.linkLabel1);
             this.tabPage2.Controls.Add(this.comboBox2);
@@ -105,6 +108,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Datos";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(22, 14);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(0, 16);
+            this.lbID.TabIndex = 28;
+            this.lbID.Visible = false;
             // 
             // linkLabel2
             // 
@@ -226,12 +238,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
+            // tituloForm
+            // 
+            this.tituloForm.AutoSize = true;
+            this.tituloForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tituloForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tituloForm.Location = new System.Drawing.Point(28, 20);
+            this.tituloForm.Name = "tituloForm";
+            this.tituloForm.Size = new System.Drawing.Size(125, 20);
+            this.tituloForm.TabIndex = 29;
+            this.tituloForm.Text = "Nuevo Articulo";
+            // 
             // FormArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(669, 397);
+            this.Controls.Add(this.tituloForm);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormArticulos";
@@ -241,6 +265,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,5 +288,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        public System.Windows.Forms.Label lbID;
+        public System.Windows.Forms.Label tituloForm;
     }
 }

@@ -443,8 +443,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label5;
-        private MURKDataSet mURKDataSet;
-        private MURKDataSetTableAdapters.CompañiaTableAdapter compañiaTableAdapter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button2;

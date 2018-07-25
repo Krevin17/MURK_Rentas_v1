@@ -20,7 +20,7 @@ namespace MURK_Rentas
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             FormProveedor FPro = new FormProveedor();
-            FPro.Show();
+            FPro.ShowDialog();
         }
 
     }

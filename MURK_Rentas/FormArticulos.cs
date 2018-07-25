@@ -22,37 +22,71 @@ namespace MURK_Rentas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (tituloForm.Text == "Nuevo Articulo")
             {
-                con.Open();
-                SqlCommand query = con.CreateCommand();//crea comando
-                query.CommandType = CommandType.Text;
-                query.CommandText = string.Format("EXEC ALTA_ARTICULO'" + textBox1.Text + "','" + textBox2.Text + "','" + comboBox1.SelectedValue + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox2.SelectedValue + "'");
-                int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
-                if (result > 0)
+                try
                 {
-                    MessageBox.Show("Registro almacenado exitosamente");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                    comboBox1.Text = "";
-                    comboBox2.Text = "";
+                    con.Open();
+                    SqlCommand query = con.CreateCommand();//crea comando
+                    query.CommandType = CommandType.Text;
+                    query.CommandText = string.Format("EXEC ALTA_ARTICULO'" + textBox1.Text + "','" + textBox2.Text + "','" + comboBox1.SelectedValue + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox2.SelectedValue + "'");
+                    int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Registro almacenado exitosamente");
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        comboBox1.Text = "";
+                        comboBox2.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo almacenar el registro");
+                    }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("No se pudo almacenar el registro");
+                    MessageBox.Show("Error-catch");
+                }
+                finally
+                {
+                    if (con.State != ConnectionState.Closed)
+                    {
+                        con.Close();
+                    }
                 }
             }
-            catch
+            else if (tituloForm.Text == "Editar Articulo")
             {
-                MessageBox.Show("Error-catch");
-            }
-            finally
-            {
-                if (con.State != ConnectionState.Closed)
+                try
                 {
-                    con.Close();                    
+                    con.Open();
+                    SqlCommand query = con.CreateCommand();//crea comando
+                    query.CommandType = CommandType.Text;
+                    query.CommandText = string.Format("EXEC MOD_ARTICULOS '" + lbID.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + comboBox1.SelectedValue + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox2.SelectedValue + "'");
+                    int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Registro modificado exitosamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo modificar el registro");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error-catch");
+                }
+                finally
+                {
+                    if (con.State != ConnectionState.Closed)
+                    {
+                        con.Close();
+                        this.Close();
+                    }
                 }
             }
         }
@@ -60,13 +94,13 @@ namespace MURK_Rentas
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormCategoria FCat = new FormCategoria();
-            FCat.Show();
+            FCat.ShowDialog();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormProveedor FPro = new FormProveedor();
-            FPro.Show();
+            FPro.ShowDialog();
         }
 
         public DataTable listaProveedores()
@@ -122,6 +156,40 @@ namespace MURK_Rentas
             con.ConnectionString = "Data Source=localhost;Initial Catalog=MURK;Integrated Security=True";
             cargarProveedores();
             cargarCategorias();
+            if (tituloForm.Text == "Editar Articulo")
+            {
+                BusquedaEditar();
+            }            
+        }
+
+        private void BusquedaEditar()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand consulta = con.CreateCommand();//crea comando
+                consulta.CommandType = CommandType.Text;
+                consulta.CommandText = string.Format("SELECT * FROM Articulos WHERE Id = '" + lbID.Text + "'");
+                SqlDataReader busqueda;
+                busqueda = consulta.ExecuteReader();
+                while (busqueda.Read() == true)
+                {
+                    textBox1.Text = busqueda["nombre"].ToString();
+                    textBox2.Text = busqueda["descripcion"].ToString();
+                    comboBox1.SelectedValue = busqueda["id_categoria"].ToString();
+                    textBox3.Text = busqueda["precio_compra"].ToString();
+                    textBox4.Text = busqueda["precio_renta"].ToString();
+                    comboBox2.SelectedValue = busqueda["id_provedor"].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error de busqueda catch");
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }
