@@ -30,6 +30,30 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_PROVEEDORESTableAdapter" GeneratorDataComponentClassName="V_PROVEEDORESTableAdapter" Name="V_PROVEEDORES" UserDataComponentName="V_PROVEEDORESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MURKConnectionString1 (Settings)" DbObjectName="MURK.dbo.V_PROVEEDORES" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Nombre, Apellido, Correo, Telefono, Compañia, Direccion, Estado, Pais FROM dbo.V_PROVEEDORES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Apellido" DataSetColumn="Apellido" />
+              <Mapping SourceColumn="Correo" DataSetColumn="Correo" />
+              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
+              <Mapping SourceColumn="Compañia" DataSetColumn="Compañia" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="Pais" DataSetColumn="Pais" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -38,7 +62,7 @@
   <xs:element name="MURKDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MURKDataSet" msprop:Generator_UserDSName="MURKDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_ARTICULOS" msprop:Generator_TableClassName="V_ARTICULOSDataTable" msprop:Generator_TableVarName="tableV_ARTICULOS" msprop:Generator_TablePropName="V_ARTICULOS" msprop:Generator_RowDeletingName="V_ARTICULOSRowDeleting" msprop:Generator_RowChangingName="V_ARTICULOSRowChanging" msprop:Generator_RowEvHandlerName="V_ARTICULOSRowChangeEventHandler" msprop:Generator_RowDeletedName="V_ARTICULOSRowDeleted" msprop:Generator_UserTableName="V_ARTICULOS" msprop:Generator_RowChangedName="V_ARTICULOSRowChanged" msprop:Generator_RowEvArgName="V_ARTICULOSRowChangeEvent" msprop:Generator_RowClassName="V_ARTICULOSRow">
+        <xs:element name="V_ARTICULOS" msprop:Generator_TableClassName="V_ARTICULOSDataTable" msprop:Generator_TableVarName="tableV_ARTICULOS" msprop:Generator_RowChangedName="V_ARTICULOSRowChanged" msprop:Generator_TablePropName="V_ARTICULOS" msprop:Generator_RowDeletingName="V_ARTICULOSRowDeleting" msprop:Generator_RowChangingName="V_ARTICULOSRowChanging" msprop:Generator_RowEvHandlerName="V_ARTICULOSRowChangeEventHandler" msprop:Generator_RowDeletedName="V_ARTICULOSRowDeleted" msprop:Generator_RowClassName="V_ARTICULOSRow" msprop:Generator_UserTableName="V_ARTICULOS" msprop:Generator_RowEvArgName="V_ARTICULOSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -82,10 +106,71 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="V_PROVEEDORES" msprop:Generator_TableClassName="V_PROVEEDORESDataTable" msprop:Generator_TableVarName="tableV_PROVEEDORES" msprop:Generator_TablePropName="V_PROVEEDORES" msprop:Generator_RowDeletingName="V_PROVEEDORESRowDeleting" msprop:Generator_RowChangingName="V_PROVEEDORESRowChanging" msprop:Generator_RowEvHandlerName="V_PROVEEDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="V_PROVEEDORESRowDeleted" msprop:Generator_UserTableName="V_PROVEEDORES" msprop:Generator_RowChangedName="V_PROVEEDORESRowChanged" msprop:Generator_RowEvArgName="V_PROVEEDORESRowChangeEvent" msprop:Generator_RowClassName="V_PROVEEDORESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_UserColumnName="Apellido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono" type="xs:long" minOccurs="0" />
+              <xs:element name="Compañia" msprop:Generator_ColumnVarNameInTable="columnCompañia" msprop:Generator_ColumnPropNameInRow="Compañia" msprop:Generator_ColumnPropNameInTable="CompañiaColumn" msprop:Generator_UserColumnName="Compañia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pais" msprop:Generator_ColumnVarNameInTable="columnPais" msprop:Generator_ColumnPropNameInRow="Pais" msprop:Generator_ColumnPropNameInTable="PaisColumn" msprop:Generator_UserColumnName="Pais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:V_ARTICULOS" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="V_PROVEEDORES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_PROVEEDORES" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>

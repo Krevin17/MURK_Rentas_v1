@@ -59,6 +59,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tituloForm = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.tabEmpresa.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -76,14 +78,13 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(532, 74);
+            this.button1.Location = new System.Drawing.Point(575, 141);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 27;
             this.button1.Text = "Cancelar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGuardar
             // 
@@ -97,7 +98,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Transparent;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(532, 38);
+            this.btnGuardar.Location = new System.Drawing.Point(575, 105);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 30);
             this.btnGuardar.TabIndex = 26;
@@ -265,6 +266,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lbID);
             this.tabPage2.Controls.Add(this.linkLabel1);
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.label5);
@@ -284,7 +286,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Proveedor";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // linkLabel1
             // 
@@ -386,19 +387,40 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabEmpresa);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Location = new System.Drawing.Point(29, 80);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(488, 304);
             this.tabControl1.TabIndex = 28;
             // 
+            // tituloForm
+            // 
+            this.tituloForm.AutoSize = true;
+            this.tituloForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tituloForm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tituloForm.Location = new System.Drawing.Point(29, 28);
+            this.tituloForm.Name = "tituloForm";
+            this.tituloForm.Size = new System.Drawing.Size(145, 20);
+            this.tituloForm.TabIndex = 30;
+            this.tituloForm.Text = "Nuevo Proveedor";
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(21, 14);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(0, 16);
+            this.lbID.TabIndex = 35;
+            this.lbID.Visible = false;
+            // 
             // FormProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(644, 351);
+            this.ClientSize = new System.Drawing.Size(687, 409);
+            this.Controls.Add(this.tituloForm);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
@@ -412,6 +434,7 @@
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -448,5 +471,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label tituloForm;
+        public System.Windows.Forms.Label lbID;
     }
 }

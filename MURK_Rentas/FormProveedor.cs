@@ -21,35 +21,44 @@ namespace MURK_Rentas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (tituloForm.Text == "Editar Proveedor")
             {
-                con.Open();
-                SqlCommand query = con.CreateCommand();//crea comando
-                query.CommandType = CommandType.Text;
-                query.CommandText = string.Format("EXEC ALTA_PROVEEDOR'" + textBox1.Text + "','" + textBox2.Text + "','"+ textBox3.Text +"','"+ textBox4.Text + "','" + comboBox1.SelectedValue + "'");
-                int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
-                if (result > 0)
-                {
-                    MessageBox.Show("Registro almacenado exitosamente");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo almacenar el registro");
-                }
+                editarRegistro();
             }
-            catch
+            else
             {
-                MessageBox.Show("Error-catch");
-            }
-            finally
-            {
-                if (con.State != ConnectionState.Closed)
+
+
+                try
                 {
-                    con.Close();
+                    con.Open();
+                    SqlCommand query = con.CreateCommand();//crea comando
+                    query.CommandType = CommandType.Text;
+                    query.CommandText = string.Format("EXEC ALTA_PROVEEDOR'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox1.SelectedValue + "'");
+                    int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Registro almacenado exitosamente");
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo almacenar el registro");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Error-catch");
+                }
+                finally
+                {
+                    if (con.State != ConnectionState.Closed)
+                    {
+                        con.Close();
+                    }
                 }
             }
         }
@@ -59,6 +68,10 @@ namespace MURK_Rentas
             con = new System.Data.SqlClient.SqlConnection(); //llamar conexion al form load
             con.ConnectionString = "Data Source=localhost;Initial Catalog=MURK;Integrated Security=True";
             cargarCompañias();
+            if (tituloForm.Text == "Editar Proveedor")
+            {
+                BusquedaEditar();
+            }
         }
 
         public DataTable listaCompañias()
@@ -128,15 +141,66 @@ namespace MURK_Rentas
                 }
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+     
+        private void BusquedaEditar()
         {
-            Close();
+            try
+            {
+                con.Open();
+                SqlCommand consulta = con.CreateCommand();//crea comando
+                consulta.CommandType = CommandType.Text;
+                consulta.CommandText = string.Format("SELECT * FROM Provedor WHERE Id = '" + lbID.Text + "'");
+                SqlDataReader busqueda;
+                busqueda = consulta.ExecuteReader();
+                while (busqueda.Read() == true)
+                {
+                    textBox1.Text = busqueda["nombre"].ToString();
+                    textBox2.Text = busqueda["apellido"].ToString();
+                    textBox3.Text = busqueda["correo"].ToString();
+                    textBox4.Text = busqueda["telefono"].ToString();
+                    comboBox1.SelectedValue = busqueda["id_compañia"].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error de busqueda catch");
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void editarRegistro()
         {
-
+            try
+            {
+                con.Open();
+                SqlCommand query = con.CreateCommand();//crea comando
+                query.CommandType = CommandType.Text;
+                query.CommandText = string.Format("EXEC MOD_PROVEEDOR '"+ lbID.Text +"','" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox1.SelectedValue + "'");
+                int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                if (result > 0)
+                {
+                    MessageBox.Show("Registro modificado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo almacenar el registro");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error-catch");
+            }
+            finally
+            {
+                if (con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                    this.Close();
+                }
+            }
         }
     }
 }
