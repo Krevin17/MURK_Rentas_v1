@@ -1,0 +1,6 @@
+SELECT        A.Id, A.Nombre, A.Descripcion, dbo.Categoria.Nombre AS Categoria, A.Precio_renta AS [Precio de Renta], A.Stock, P.Nombre AS Proveedor, C.Nombre AS Compañia
+FROM            dbo.Articulos AS A INNER JOIN
+                         dbo.Provedor AS P ON A.Id_provedor = P.Id INNER JOIN
+                         dbo.Compañia AS C ON P.Id_compañia = C.Id INNER JOIN
+                         dbo.Categoria ON A.Id_categoria = dbo.Categoria.Id
+WHERE        (A.Status = 1)
