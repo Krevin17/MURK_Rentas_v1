@@ -16,8 +16,6 @@ namespace MURK_Rentas
     {
         System.Data.SqlClient.SqlConnection con; 
         string rfid_usuario = "";
-        string tipo_usuario, status;
-        string nombre = "";
 
         public Form1()
         {
@@ -55,7 +53,7 @@ namespace MURK_Rentas
             menu.lbRFID_menu.Text = rfid_usuario;
             this.Hide();
             menu.ShowDialog();
-            this.Close();          
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -91,14 +89,12 @@ namespace MURK_Rentas
                 busqueda = query.ExecuteReader();                
                 while (busqueda.Read() == true)
                 {
-                    String tipo_usuario = busqueda["[Id_tipo_usuario]"].ToString();
-                    String status = busqueda["[Status]"].ToString();
-                    lbNombre.Text = busqueda["[Nombre]"].ToString();
+                    lbNombre.Text = busqueda["Id_tipo_usuario"].ToString();
                 }                
             }
             catch
             {
-                MessageBox.Show("error");
+
             }
             finally
             {
@@ -117,14 +113,34 @@ namespace MURK_Rentas
 
         private void lbRFID_TextChanged(object sender, EventArgs e)
         {
-            
+            lbNombre.Text = "";
+            BuscarRfidUsuario();
+            if (lbNombre.Text == "1")
+            {
+                try
+                {
+                    timer1.Stop();
+                    serialPort1.Close();
+                }
+                catch
+                {
 
+                }
+                finally
+                {
+                    Menu menu = new Menu();
+                    menu.lbPort_menu.Text = lbPort.Text;
+                    menu.lbRFID_menu.Text = rfid_usuario;
+                    this.Hide();
+                    menu.Show();
+                    //Close();
+                }
+            }            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbRFID.Text = rfid_usuario;
-            BuscarRfidUsuario();
         }
 
         private void lbPort_TextChanged(object sender, EventArgs e)
