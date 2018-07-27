@@ -63,6 +63,26 @@ namespace MURK_Rentas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _33720251_1740401602743978_358665593538215936_n {
+            get {
+                object obj = ResourceManager.GetObject("33720251_1740401602743978_358665593538215936_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _33847732_1740401589410646_8295324033340145664_n {
+            get {
+                object obj = ResourceManager.GetObject("33847732_1740401589410646_8295324033340145664_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_ajustes_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-ajustes-96", resourceCulture);
@@ -86,6 +106,16 @@ namespace MURK_Rentas.Properties {
         internal static System.Drawing.Bitmap icons8_camión_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-camión-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cerrar_sesión_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cerrar-sesión-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

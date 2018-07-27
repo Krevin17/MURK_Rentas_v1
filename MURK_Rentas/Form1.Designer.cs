@@ -90,7 +90,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(135, 28);
             this.button3.TabIndex = 7;
-            this.button3.Text = "inicio rapido git";
+            this.button3.Text = "inicio rapido";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -163,9 +163,8 @@
             this.lbNombre.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbNombre.Location = new System.Drawing.Point(2, 241);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(27, 13);
+            this.lbNombre.Size = new System.Drawing.Size(0, 13);
             this.lbNombre.TabIndex = 9;
-            this.lbNombre.Text = "nom";
             // 
             // Form1
             // 

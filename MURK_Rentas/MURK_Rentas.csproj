@@ -282,6 +282,15 @@
   <ItemGroup>
     <None Include="Resources\icons8-menú-40.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33720251_1740401602743978_358665593538215936_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33847732_1740401589410646_8295324033340145664_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cerrar-sesión-641.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
