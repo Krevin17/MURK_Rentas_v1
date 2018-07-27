@@ -23,22 +23,22 @@ namespace MURK_Rentas
         {
             timer1.Start();
             con = new System.Data.SqlClient.SqlConnection(); //llamar conexion al form load
-            con.ConnectionString = "Data Source=ASUSTP300;Initial Catalog=MURK;Integrated Security=True";
+            con.ConnectionString = "Data Source=localhost;Initial Catalog=MURK;Integrated Security=True";
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
                 con.Open();
                 SqlCommand query = con.CreateCommand();//crea comando
                 query.CommandType = CommandType.Text;
-                query.CommandText = string.Format("INSERT INTO usuarios(codigo,nombres,apellidos,permisos) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')");
+                query.CommandText = string.Format("EXEC ALTA_PERSONA'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox11.Text + "','" + textBox10.Text + "'");
                 int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
                 if (result > 0)
                 {
-                    MessageBox.Show("Registro almacenado exitosamente");
+                    MessageBox.Show("Registro almacenado exitosamente *Y");
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox3.Text = "";
@@ -51,7 +51,7 @@ namespace MURK_Rentas
             }
             catch
             {
-
+                MessageBox.Show("Error-catch");
             }
             finally
             {
@@ -60,6 +60,8 @@ namespace MURK_Rentas
                     con.Close();
                 }
             }
+            
+        }
         }
     }
 }
