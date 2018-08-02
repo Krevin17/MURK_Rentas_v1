@@ -19,7 +19,8 @@ namespace MURK_Rentas
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            FormPrestamo FP = new FormPrestamo();
+            FP.ShowDialog();
         }
     }
 }

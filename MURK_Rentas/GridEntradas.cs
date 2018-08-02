@@ -16,5 +16,11 @@ namespace MURK_Rentas
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            FormEntradas FE = new FormEntradas();
+            FE.ShowDialog();
+        }
     }
 }

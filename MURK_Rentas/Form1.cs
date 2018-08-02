@@ -135,7 +135,12 @@ namespace MURK_Rentas
                     menu.Show();
                     //Close();
                 }
-            }            
+            }
+            else if(lbNombre.Text=="2")
+                MessageBox.Show("Acceso Denegado.", "MURK - Inicio de sesión",MessageBoxButtons.OK ,MessageBoxIcon.Error);          
+            else if(lbNombre.Text==" ")
+                MessageBox.Show("Tarjeta no registrada como usuario.", "MURK - Inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

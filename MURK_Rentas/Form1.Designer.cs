@@ -69,10 +69,10 @@
             // 
             this.lbPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbPort.AutoSize = true;
             this.lbPort.BackColor = System.Drawing.Color.Transparent;
             this.lbPort.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbPort.Location = new System.Drawing.Point(173, 352);
+            this.lbPort.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lbPort.Location = new System.Drawing.Point(163, 303);
             this.lbPort.Name = "lbPort";
             this.lbPort.Size = new System.Drawing.Size(108, 13);
             this.lbPort.TabIndex = 6;
@@ -87,7 +87,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(80, 12);
+            this.button3.Location = new System.Drawing.Point(80, 1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(135, 28);
             this.button3.TabIndex = 7;
@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(283, 374);
+            this.ClientSize = new System.Drawing.Size(283, 325);
             this.Controls.Add(this.lbAcceso);
             this.Controls.Add(this.lbNombre);
             this.Controls.Add(this.lbRFID);

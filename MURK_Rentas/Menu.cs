@@ -83,5 +83,10 @@ namespace MURK_Rentas
         {
 
         }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }
