@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MURK_Rentas
 {
@@ -17,9 +18,19 @@ namespace MURK_Rentas
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void FormPrestamo_Load(object sender, EventArgs e)
         {
-            this.Close();
+            serialPort1.PortName = Puerto.Text;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

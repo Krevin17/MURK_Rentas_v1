@@ -12,6 +12,7 @@ namespace MURK_Rentas
 {
     public partial class Menu : Form
     {
+        string p,u;
         public Menu()
         {
             InitializeComponent();
@@ -76,12 +77,13 @@ namespace MURK_Rentas
 
         private void button7_Click(object sender, EventArgs e)
         {
-            AbrirGridInPanel(new GridPrestamos());
+            AbrirGridInPanel(new GridPrestamos(p,u));
         }
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            p = lbPort_menu.Text;
+            u = lbRFID_menu.Text;
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
