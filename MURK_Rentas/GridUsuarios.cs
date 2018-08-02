@@ -12,14 +12,16 @@ namespace MURK_Rentas
 {
     public partial class GridUsuarios : Form
     {
-        public GridUsuarios()
+        string port;
+        public GridUsuarios(string p)
         {
             InitializeComponent();
+            port = p;            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FormUsuarios fu = new FormUsuarios();
+            FormUsuarios fu = new FormUsuarios(port);
             fu.ShowDialog();
         }
     }

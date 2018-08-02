@@ -32,7 +32,7 @@ namespace MURK_Rentas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirGridInPanel(new GridUsuarios());
+            AbrirGridInPanel(new GridUsuarios(p));
         }
 
 

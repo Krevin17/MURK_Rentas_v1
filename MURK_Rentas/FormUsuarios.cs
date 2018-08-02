@@ -13,9 +13,11 @@ namespace MURK_Rentas
 {
     public partial class FormUsuarios : Form
     {
-        public FormUsuarios()
+        string port; //Usar esta variable en -> SerialPort1.NamePort = port
+        public FormUsuarios(string p)
         {
             InitializeComponent();
+            port = p;
         }
 
         System.Data.SqlClient.SqlConnection con; //variable que lleva al servidor
