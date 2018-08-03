@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableAdapterManager1 = new MURK_Rentas.MURKDataSetTableAdapters.TableAdapterManager();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.m = new System.Windows.Forms.Panel();
             this.Usuario = new System.Windows.Forms.Label();
             this.Puerto = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@
             this.lbAutorizado = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbRfid = new System.Windows.Forms.Label();
             this.btnListo = new System.Windows.Forms.Button();
             this.lbNombre = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.panel3.SuspendLayout();
+            this.m.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbDias)).BeginInit();
@@ -74,24 +75,23 @@
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.UpdateOrder = MURK_Rentas.MURKDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // panel3
+            // m
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.Usuario);
-            this.panel3.Controls.Add(this.Puerto);
-            this.panel3.Controls.Add(this.btnCancelar);
-            this.panel3.Controls.Add(this.btnGuardar);
-            this.panel3.Controls.Add(this.dataGridView2);
-            this.panel3.Controls.Add(this.tituloForm);
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(778, 648);
-            this.panel3.TabIndex = 39;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.m.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.m.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.m.Controls.Add(this.Usuario);
+            this.m.Controls.Add(this.Puerto);
+            this.m.Controls.Add(this.btnCancelar);
+            this.m.Controls.Add(this.btnGuardar);
+            this.m.Controls.Add(this.dataGridView2);
+            this.m.Controls.Add(this.tituloForm);
+            this.m.Controls.Add(this.panel2);
+            this.m.Controls.Add(this.panel1);
+            this.m.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m.Location = new System.Drawing.Point(0, 0);
+            this.m.Name = "m";
+            this.m.Size = new System.Drawing.Size(778, 648);
+            this.m.TabIndex = 39;
             // 
             // Usuario
             // 
@@ -103,6 +103,7 @@
             this.Usuario.Size = new System.Drawing.Size(53, 16);
             this.Usuario.TabIndex = 34;
             this.Usuario.Text = "--User--";
+            this.Usuario.Visible = false;
             // 
             // Puerto
             // 
@@ -114,6 +115,7 @@
             this.Puerto.Size = new System.Drawing.Size(63, 16);
             this.Puerto.TabIndex = 34;
             this.Puerto.Text = "--Puerto--";
+            this.Puerto.Visible = false;
             // 
             // btnCancelar
             // 
@@ -358,6 +360,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.panel1.Controls.Add(this.lbRfid);
             this.panel1.Controls.Add(this.btnListo);
             this.panel1.Controls.Add(this.lbNombre);
             this.panel1.Controls.Add(this.label17);
@@ -367,6 +370,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(348, 203);
             this.panel1.TabIndex = 36;
+            // 
+            // lbRfid
+            // 
+            this.lbRfid.AutoSize = true;
+            this.lbRfid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRfid.ForeColor = System.Drawing.Color.White;
+            this.lbRfid.Location = new System.Drawing.Point(172, 119);
+            this.lbRfid.Name = "lbRfid";
+            this.lbRfid.Size = new System.Drawing.Size(20, 16);
+            this.lbRfid.TabIndex = 44;
+            this.lbRfid.Text = "---";
+            this.lbRfid.TextChanged += new System.EventHandler(this.lbRfid_TextChanged);
             // 
             // btnListo
             // 
@@ -387,6 +402,8 @@
             this.btnListo.Text = "Listo";
             this.btnListo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnListo.UseVisualStyleBackColor = false;
+            this.btnListo.Visible = false;
+            this.btnListo.Click += new System.EventHandler(this.btnListo_Click);
             // 
             // lbNombre
             // 
@@ -432,7 +449,13 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.PortName = "COM4";
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // FormPrestamo
             // 
@@ -440,14 +463,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(778, 648);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.m);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrestamo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrestamo";
             this.Load += new System.EventHandler(this.FormPrestamo_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.m.ResumeLayout(false);
+            this.m.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -461,7 +484,7 @@
 
         #endregion
         private MURKDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel m;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dataGridView2;
         public System.Windows.Forms.Label tituloForm;
@@ -488,5 +511,6 @@
         private System.IO.Ports.SerialPort serialPort1;
         public System.Windows.Forms.Label Usuario;
         public System.Windows.Forms.Label Puerto;
+        public System.Windows.Forms.Label lbRfid;
     }
 }
