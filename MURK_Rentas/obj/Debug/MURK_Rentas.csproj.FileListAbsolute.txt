@@ -84,3 +84,5 @@ C:\Users\Ubaldrinks\source\repos\MURK_Rentas_v1-master\MURK_Rentas_v1\MURK_Renta
 C:\Users\Ubaldrinks\source\repos\MURK_Rentas_v1-master\MURK_Rentas_v1\MURK_Rentas\obj\Debug\MURK_Rentas.csproj.CoreCompileInputs.cache
 C:\Users\Ubaldrinks\source\repos\MURK_Rentas_v1-master\MURK_Rentas_v1\MURK_Rentas\obj\Debug\MURK_Rentas.exe
 C:\Users\Ubaldrinks\source\repos\MURK_Rentas_v1-master\MURK_Rentas_v1\MURK_Rentas\obj\Debug\MURK_Rentas.pdb
+D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas\bin\Debug\MURK_Rentas.exe.CodeAnalysisLog.xml
+D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas\bin\Debug\MURK_Rentas.exe.lastcodeanalysissucceeded

@@ -14,7 +14,6 @@ namespace MURK_Rentas
 {
     public partial class FormProveedor : Form
     {
-        Boolean error = true;
         System.Data.SqlClient.SqlConnection con; //variable que lleva al servidor
 
         public FormProveedor()

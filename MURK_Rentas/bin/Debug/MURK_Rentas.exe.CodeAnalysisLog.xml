@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas\bin\Debug\MURK_Rentas.exe">
+   <Modules>
+    <Module Name="murk_rentas.exe">
+     <Namespaces>
+      <Namespace Name="MURK_Rentas">
+       <Types>
+        <Type Name="Form1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BuscarRfidUsuario()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="Form1.cs" Line="87">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'Form1.BuscarRfidUsuario()' podría contener las siguientes variables: 'this.lbRFID.Text'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormArticulos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnGuardar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormArticulos.cs" Line="68">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormArticulos.btnGuardar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.lbID.Text', 'this.textBox1.Text', 'this.textBox2.Text', 'this.comboBox1.SelectedValue', 'this.textBox3.Text', 'this.textBox4.Text', 'this.comboBox2.SelectedValue'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormArticulos.cs" Line="32">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormArticulos.btnGuardar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.textBox1.Text', 'this.textBox2.Text', 'this.comboBox1.SelectedValue', 'this.textBox3.Text', 'this.textBox4.Text', 'this.comboBox2.SelectedValue'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BusquedaEditar()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormArticulos.cs" Line="172">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormArticulos.BusquedaEditar()' podría contener las siguientes variables: 'this.lbID.Text'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormCategoria" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnGuardar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormCategoria.cs" Line="29">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormCategoria.btnGuardar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.textBox1.Text'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormPrestamo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#buscarRfid(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormPrestamo.cs" Line="61">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormPrestamo.buscarRfid(string)' podría contener las siguientes variables: 'rfid'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormPrestamo.cs" Line="73">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormPrestamo.buscarRfid(string)' podría contener las siguientes variables: 'rfid'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormProveedor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnGuardar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormProveedor.cs" Line="42">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormProveedor.btnGuardar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.textBox1.Text', 'this.textBox2.Text', 'this.textBox3.Text', 'this.textBox4.Text', 'this.comboBox1.SelectedValue'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BusquedaEditar()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormProveedor.cs" Line="158">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormProveedor.BusquedaEditar()' podría contener las siguientes variables: 'this.lbID.Text'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#button2_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormProveedor.cs" Line="118">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormProveedor.button2_Click(object, EventArgs)' podría contener las siguientes variables: 'this.textBox5.Text', 'this.textBox6.Text', 'this.textBox7.Text', 'this.textBox8.Text', 'this.textBox9.Text', 'this.textBox10.Text', 'this.textBox11.Text'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#editarRegistro()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormProveedor.cs" Line="187">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormProveedor.editarRegistro()' podría contener las siguientes variables: 'this.lbID.Text', 'this.textBox1.Text', 'this.textBox2.Text', 'this.textBox3.Text', 'this.textBox4.Text', 'this.comboBox1.SelectedValue'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FormUsuarios" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnGuardar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="FormUsuarios.cs" Line="39">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'FormUsuarios.btnGuardar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.textBox1.Text', 'this.textBox2.Text', 'this.textBox3.Text', 'this.dateTimePicker1.Text', 'this.textBox4.Text', 'this.textBox5.Text', 'this.textBox6.Text', 'this.textBox7.Text', 'this.textBox11.Text', 'this.textBox10.Text'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GridProductos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnEliminar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="GridProductos.cs" Line="68">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'GridProductos.btnEliminar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.dataGridView2.CurrentRow.Cells[0].Value'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GridProveedores" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnEliminar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\Universidad\ITI 9°\Desarrollo de Aplicacionesz\Projects\Murk_git\MURK_Rentas\MURK_Rentas" File="GridProveedores.cs" Line="57">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'GridProveedores.btnEliminar_Click(object, EventArgs)' podría contener las siguientes variables: 'this.dataGridView2.CurrentRow.Cells[0].Value'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MURKDataSet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'MURKDataSet'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MURKDataSet+V_ARTICULOSDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'MURKDataSet.V_ARTICULOSDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MURKDataSet+V_INVENTARIODataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'MURKDataSet.V_INVENTARIODataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="MURKDataSet+V_PROVEEDORESDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2018-08-06 16:25:34Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'MURKDataSet.V_PROVEEDORESDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="MURK_Rentas.Properties">
+       <Types>
+        <Type Name="Resources" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="ExcludedInSource" Created="2018-08-06 16:25:34Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Evitar código privado al que no se llama</Name>
+   <Description>Hay código al que no se llama que no es visible externamente y no es un punto de entrada conocido del runtime. Si esta infracción da lugar a un error, envíe un informe sobre el problema al equipo de análisis de código de Visual Studio.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>Implementar ISerializable correctamente</Name>
+   <Description>Si se puede asignar un tipo a ISerializable, debe implementar GetObjectData. Para tipos unsealed, el método GetObjectData debe ser invocable y reemplazable por tipos derivados.</Description>
+   <Resolution Name="Default">Agregue una implementación de GetObjectData al tipo {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad</Name>
+   <Description>Una cadena de comando SQL compilada a partir de datos proporcionados por el usuario es vulnerable a ataques pon inyección de código SQL. Microsoft SQL Server y otros servidores de bases de datos admiten procedimientos almacenados y consultas SQL parametrizadas, que reducen el riesgo de ataques por inyección.</Description>
+   <Resolution Name="WithNonLiterals">La cadena de consulta pasada a {0} en {1} podría contener las siguientes variables: {2}. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>
