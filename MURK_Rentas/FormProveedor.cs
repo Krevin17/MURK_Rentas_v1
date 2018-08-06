@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace MURK_Rentas
 {
     public partial class FormProveedor : Form
     {
+        Boolean error = true;
         System.Data.SqlClient.SqlConnection con; //variable que lleva al servidor
+
         public FormProveedor()
         {
             InitializeComponent();
@@ -21,43 +24,46 @@ namespace MURK_Rentas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (tituloForm.Text == "Editar Proveedor")
-            {
-                editarRegistro();
-            }
-            else
-            {
+            if (validarProveedor() == true)
+            {                          
+                if (tituloForm.Text == "Editar Proveedor")
+                {
+                    editarRegistro();
+                }
+                else
+                {
 
 
-                try
-                {
-                    con.Open();
-                    SqlCommand query = con.CreateCommand();//crea comando
-                    query.CommandType = CommandType.Text;
-                    query.CommandText = string.Format("EXEC ALTA_PROVEEDOR'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox1.SelectedValue + "'");
-                    int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
-                    if (result > 0)
+                    try
                     {
-                        MessageBox.Show("Registro almacenado exitosamente");
-                        textBox1.Text = "";
-                        textBox2.Text = "";
-                        textBox3.Text = "";
-                        textBox4.Text = "";
+                        con.Open();
+                        SqlCommand query = con.CreateCommand();//crea comando
+                        query.CommandType = CommandType.Text;
+                        query.CommandText = string.Format("EXEC ALTA_PROVEEDOR'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox1.SelectedValue + "'");
+                        int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Registro almacenado exitosamente");
+                            textBox1.Text = "";
+                            textBox2.Text = "";
+                            textBox3.Text = "";
+                            textBox4.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo almacenar el registro");
+                        }
                     }
-                    else
+                    catch
                     {
-                        MessageBox.Show("No se pudo almacenar el registro");
+                        MessageBox.Show("Error-catch");
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Error-catch");
-                }
-                finally
-                {
-                    if (con.State != ConnectionState.Closed)
+                    finally
                     {
-                        con.Close();
+                        if (con.State != ConnectionState.Closed)
+                        {
+                            con.Close();
+                        }
                     }
                 }
             }
@@ -201,6 +207,87 @@ namespace MURK_Rentas
                     this.Close();
                 }
             }
+        }        
+
+        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private Boolean expresionEmail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        
+        private bool validarProveedor()
+        {
+            if (expresionEmail(textBox3.Text) == false)
+            {
+                errorProvider1.SetError(textBox3, "Ingresar correo electronico valido.");
+
+                return false;
+            }
+            else if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text))
+            {
+                errorProvider1.SetError(textBox1, "Campo requerido");
+                errorProvider1.SetError(textBox2, "Campo requerido");
+
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                error = false;
+                return true;
+            }
+        }
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            
         }
     }
 }

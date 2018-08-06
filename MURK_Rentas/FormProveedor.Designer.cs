@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.tabEmpresa = new System.Windows.Forms.TabPage();
@@ -47,6 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbID = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,10 +62,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tituloForm = new System.Windows.Forms.Label();
-            this.lbID = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabEmpresa.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -154,6 +157,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox11.Location = new System.Drawing.Point(190, 196);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(265, 22);
@@ -174,13 +178,16 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(265, 22);
             this.textBox10.TabIndex = 30;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(190, 140);
+            this.textBox9.MaxLength = 6;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(265, 22);
             this.textBox9.TabIndex = 28;
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // textBox8
             // 
@@ -188,6 +195,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(265, 22);
             this.textBox8.TabIndex = 27;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox7
             // 
@@ -195,6 +203,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(265, 22);
             this.textBox7.TabIndex = 24;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox6
             // 
@@ -287,6 +296,15 @@
             this.tabPage2.Text = "Proveedor";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(21, 14);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(0, 16);
+            this.lbID.TabIndex = 35;
+            this.lbID.Visible = false;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -320,9 +338,11 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(178, 145);
+            this.textBox4.MaxLength = 10;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(265, 22);
             this.textBox4.TabIndex = 22;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
             // 
             // textBox3
             // 
@@ -330,6 +350,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(265, 22);
             this.textBox3.TabIndex = 12;
+            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
             // textBox2
             // 
@@ -337,6 +358,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(265, 22);
             this.textBox2.TabIndex = 11;
+            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
+
             // 
             // textBox1
             // 
@@ -344,6 +367,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(265, 22);
             this.textBox1.TabIndex = 10;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
+
             // 
             // label4
             // 
@@ -405,14 +430,9 @@
             this.tituloForm.TabIndex = 30;
             this.tituloForm.Text = "Nuevo Proveedor";
             // 
-            // lbID
+            // errorProvider1
             // 
-            this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(21, 14);
-            this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(0, 16);
-            this.lbID.TabIndex = 35;
-            this.lbID.Visible = false;
+            this.errorProvider1.ContainerControl = this;
             // 
             // FormProveedor
             // 
@@ -433,6 +453,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,5 +494,6 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label tituloForm;
         public System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
