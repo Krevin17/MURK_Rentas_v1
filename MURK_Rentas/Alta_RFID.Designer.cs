@@ -40,14 +40,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPort
             // 
             this.lblPort.AutoSize = true;
-            this.lblPort.Location = new System.Drawing.Point(187, 267);
+            this.lblPort.Location = new System.Drawing.Point(186, 266);
             this.lblPort.Name = "lblPort";
             this.lblPort.Size = new System.Drawing.Size(35, 13);
             this.lblPort.TabIndex = 18;
@@ -62,7 +64,7 @@
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.txtRFID);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(13, 20);
+            this.panel1.Location = new System.Drawing.Point(12, 19);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 244);
             this.panel1.TabIndex = 17;
@@ -126,11 +128,12 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(473, 15);
+            this.button2.Location = new System.Drawing.Point(472, 14);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 28);
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -151,23 +154,36 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.lblPort);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(532, 297);
+            this.panel2.TabIndex = 20;
+            // 
             // Alta_RFID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(534, 300);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.lblPort);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.DarkGray;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Alta_RFID";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta_RFID";
             this.Load += new System.EventHandler(this.Alta_RFID_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -184,5 +200,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.IO.Ports.SerialPort serialPort2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

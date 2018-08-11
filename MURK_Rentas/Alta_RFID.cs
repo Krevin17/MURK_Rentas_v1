@@ -95,8 +95,45 @@ namespace MURK_Rentas
             lblPort.Text = pu.lbPort.Text;
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            timer1.Stop();
+            serialPort2.Close();
+        }
+        public void validaSiExiste()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand consulta = con.CreateCommand();//crea comando
+                consulta.CommandType = CommandType.Text;
+                consulta.CommandText = string.Format("SELECT * FROM Usuarios WHERE Rfid = '" + txtRFID.Text+ "'");
+                SqlDataReader busqueda;
+                busqueda = consulta.ExecuteReader();
+                while (busqueda.Read() == true)
+                {
+                 
+
+                    MessageBox.Show("Esta tarjeta esta asignada a otro usuario, Ingrese otra", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error de busqueda catch");
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
         private void txtRFID_TextChanged(object sender, EventArgs e)
         {
+            validaSiExiste();
             try
             {
                 con.Open();
@@ -108,8 +145,9 @@ namespace MURK_Rentas
                 if (result > 0)
                 {
 
-                    MessageBox.Show("Registro almacenado exitosamente *Y");
-
+                    MessageBox.Show("La tarjeta RFID fue asignada correctamente");
+                    this.Close();
+                    
                 }
                 else
                 {
@@ -119,7 +157,7 @@ namespace MURK_Rentas
             catch
             {
 
-                MessageBox.Show("Error-catch");
+               // MessageBox.Show("Error-catch");
             }
             finally
             {

@@ -136,6 +136,7 @@ namespace MURK_Rentas
                 con.Close();
             }
         }
+      
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
@@ -179,13 +180,26 @@ namespace MURK_Rentas
                         con.Close();
 
                     }
+
                     buscarUltimo();
 
-                    Alta_RFID ar = new Alta_RFID();
-                    ar.lblName.Text = "Asignar Tarjeta RFID a Usuario";
-                    //this.Hide();
-                     ar.ShowDialog();
-                    // this.Close();
+                    this.Close();
+
+                    if (MessageBox.Show("Desea asignar una Tarjeta RFID a este usuario?", "MURK - Registro Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                 
+                        Alta_RFID ar = new Alta_RFID();
+                        ar.lblName.Text = "Asignar Tarjeta RFID a Usuario";
+                        this.Hide();
+                        ar.ShowDialog();
+                   
+                        timer1.Stop();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+               
                 }
             }
         }

@@ -319,9 +319,10 @@
             this.labelUltimo.AutoSize = true;
             this.labelUltimo.Location = new System.Drawing.Point(614, 341);
             this.labelUltimo.Name = "labelUltimo";
-            this.labelUltimo.Size = new System.Drawing.Size(12, 18);
+            this.labelUltimo.Size = new System.Drawing.Size(11, 18);
             this.labelUltimo.TabIndex = 22;
-            this.labelUltimo.Text = ".";
+            this.labelUltimo.Text = "l";
+            this.labelUltimo.Visible = false;
             // 
             // dateTimePicker1
             // 
