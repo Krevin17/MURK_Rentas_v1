@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta_RFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_RFID.Designer.cs">
+      <DependentUpon>Alta_RFID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuraciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MURKDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MURKDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MURKDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puertos.cs">
@@ -149,6 +160,9 @@
     <Compile Include="Puertos.Designer.cs">
       <DependentUpon>Puertos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Alta_RFID.resx">
+      <DependentUpon>Alta_RFID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones.resx">
       <DependentUpon>Configuraciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +231,17 @@
     </None>
     <None Include="MURKDataSet.xss">
       <DependentUpon>MURKDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MURKDataSet1.xsc">
+      <DependentUpon>MURKDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MURKDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MURKDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MURKDataSet1.xss">
+      <DependentUpon>MURKDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

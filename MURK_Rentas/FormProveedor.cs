@@ -280,7 +280,7 @@ namespace MURK_Rentas
             else
             {
                 errorProvider1.Clear();
-                error = false;
+               // error = false;
                 return true;
             }
         }
