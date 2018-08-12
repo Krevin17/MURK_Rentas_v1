@@ -36,8 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtRFID = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -88,7 +88,6 @@
             this.idUser.Size = new System.Drawing.Size(60, 24);
             this.idUser.TabIndex = 15;
             this.idUser.Text = "label3";
-            this.idUser.Visible = false;
             // 
             // label2
             // 
@@ -121,6 +120,16 @@
             this.txtRFID.TabIndex = 16;
             this.txtRFID.TextChanged += new System.EventHandler(this.txtRFID_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::MURK_Rentas.Properties.Resources.rfid_login;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -136,16 +145,6 @@
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::MURK_Rentas.Properties.Resources.rfid_login;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // serialPort2
             // 

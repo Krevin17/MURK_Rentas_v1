@@ -104,6 +104,7 @@ namespace MURK_Rentas
         }
         public void validaSiExiste()
         {
+            validaSiExisteArticulo();
             try
             {
                 con.Open();
@@ -131,9 +132,39 @@ namespace MURK_Rentas
             }
 
         }
+        public void validaSiExisteArticulo()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand consulta = con.CreateCommand();//crea comando
+                consulta.CommandType = CommandType.Text;
+                consulta.CommandText = string.Format("SELECT * FROM Articulo_rfid WHERE Rfid = '" + txtRFID.Text + "'");
+                SqlDataReader busqueda;
+                busqueda = consulta.ExecuteReader();
+                while (busqueda.Read() == true)
+                {
+
+
+                    MessageBox.Show("Esta tarjeta esta asignada a un Artículo, Ingrese otra", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error de busqueda catch");
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
         private void txtRFID_TextChanged(object sender, EventArgs e)
         {
             validaSiExiste();
+           
             try
             {
                 con.Open();

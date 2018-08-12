@@ -23,7 +23,7 @@ namespace MURK_Rentas
             InitializeComponent();
             port = p;
         }
-
+        
         System.Data.SqlClient.SqlConnection con; //variable que lleva al servidor
         private void FormUsuarios_Load(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace MURK_Rentas
             {
                 BusquedaEditar();
             }
-
+            textBox10.MaxLength = 10;
         }
 
 
@@ -256,6 +256,22 @@ namespace MURK_Rentas
 
                     }
                 }
+            }
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }
