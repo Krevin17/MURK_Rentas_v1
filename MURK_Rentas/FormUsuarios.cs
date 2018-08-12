@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;//base de datos
+using System.Text.RegularExpressions;
 
 namespace MURK_Rentas
 {
+   
     public partial class FormUsuarios : Form
     {
+        bool error = true;
+
         string port; //Usar esta variable en -> SerialPort1.NamePort = port
         public FormUsuarios(string p)
         {
@@ -136,70 +140,121 @@ namespace MURK_Rentas
                 con.Close();
             }
         }
-      
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private Boolean expresionEmail(String email)
         {
-
-            if (tituloForm.Text == "Editar Usuario")
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
             {
-                editarRegistro();
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                try
+                return false;
+            }
+        }
+
+        private bool validarUsuario()
+        {
+            if (expresionEmail(textBox11.Text) == false)
+            {
+                errorProvider1.SetError(textBox11, "Ingresar correo electronico valido.");
+
+                return false;
+            }
+            else if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text))
+            {
+                errorProvider1.SetError(textBox1, "Campo requerido");
+                errorProvider1.SetError(textBox2, "Campo requerido");
+                errorProvider1.SetError(textBox3, "Campo requerido");
+                errorProvider1.SetError(textBox4, "Campo requerido");
+                errorProvider1.SetError(textBox5, "Campo requerido");
+                errorProvider1.SetError(textBox6, "Campo requerido");
+                errorProvider1.SetError(textBox7, "Campo requerido");
+                errorProvider1.SetError(textBox10, "Campo requerido");
+                return false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                error = false;
+                return true;
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+            if (validarUsuario() == true)
+            {
+                if (tituloForm.Text == "Editar Usuario")
                 {
-                    con.Open();
-                    SqlCommand query = con.CreateCommand();//crea comando
-                    query.CommandType = CommandType.Text;
-                    query.CommandText = string.Format("EXEC ALTA_PERSONA'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox11.Text + "','" + textBox10.Text + "'");
-                    int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Registro almacenado exitosamente ");
-                        textBox1.Text = "";
-                        textBox2.Text = "";
-                        textBox3.Text = "";
-                        textBox4.Text = "";
-
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo almacenar el registro");
-                    }
+                    editarRegistro();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Error-catch");
-                }
-                finally
-                {
-                    if (con.State != ConnectionState.Closed)
+                    try
                     {
-                        con.Close();
+                        con.Open();
+                        SqlCommand query = con.CreateCommand();//crea comando
+                        query.CommandType = CommandType.Text;
+                        query.CommandText = string.Format("EXEC ALTA_PERSONA'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox11.Text + "','" + textBox10.Text + "'");
+                        int result = query.ExecuteNonQuery();//Regresa valor binario si se ejecuta o no la consulta
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Registro almacenado exitosamente ");
+                            textBox1.Text = "";
+                            textBox2.Text = "";
+                            textBox3.Text = "";
+                            textBox4.Text = "";
 
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo almacenar el registro");
+                        }
                     }
-
-                    buscarUltimo();
-
-                    this.Close();
-
-                    if (MessageBox.Show("Desea asignar una Tarjeta RFID a este usuario?", "MURK - Registro Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    catch
                     {
-                 
-                        Alta_RFID ar = new Alta_RFID();
-                        ar.lblName.Text = "Asignar Tarjeta RFID a Usuario";
-                        this.Hide();
-                        ar.ShowDialog();
-                   
-                        timer1.Stop();
+                        MessageBox.Show("Error-catch");
                     }
-                    else
+                    finally
                     {
+                        if (con.State != ConnectionState.Closed)
+                        {
+                            con.Close();
+
+                        }
+
+                        buscarUltimo();
+
                         this.Close();
+
+                        if (MessageBox.Show("Desea asignar una Tarjeta RFID a este usuario?", "MURK - Registro Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+
+                            Alta_RFID ar = new Alta_RFID();
+                            ar.lblName.Text = "Asignar Tarjeta RFID a Usuario";
+                            this.Hide();
+                            ar.ShowDialog();
+
+                            timer1.Stop();
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
+
                     }
-               
                 }
             }
         }

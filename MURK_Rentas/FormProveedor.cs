@@ -15,7 +15,7 @@ namespace MURK_Rentas
     public partial class FormProveedor : Form
     {
         System.Data.SqlClient.SqlConnection con; //variable que lleva al servidor
-
+        bool error = true;
         public FormProveedor()
         {
             InitializeComponent();
@@ -280,7 +280,7 @@ namespace MURK_Rentas
             else
             {
                 errorProvider1.Clear();
-               // error = false;
+             error = false;
                 return true;
             }
         }

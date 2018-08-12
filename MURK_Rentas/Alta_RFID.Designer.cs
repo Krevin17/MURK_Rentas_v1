@@ -49,9 +49,10 @@
             // lblPort
             // 
             this.lblPort.AutoSize = true;
-            this.lblPort.Location = new System.Drawing.Point(186, 266);
+            this.lblPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPort.Location = new System.Drawing.Point(431, 266);
             this.lblPort.Name = "lblPort";
-            this.lblPort.Size = new System.Drawing.Size(35, 13);
+            this.lblPort.Size = new System.Drawing.Size(51, 20);
             this.lblPort.TabIndex = 18;
             this.lblPort.Text = "label3";
             // 
@@ -87,6 +88,7 @@
             this.idUser.Size = new System.Drawing.Size(60, 24);
             this.idUser.TabIndex = 15;
             this.idUser.Text = "label3";
+            this.idUser.Visible = false;
             // 
             // label2
             // 
